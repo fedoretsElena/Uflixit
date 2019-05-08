@@ -1,19 +1,35 @@
 import React from 'react';
-
-import Header from './Header';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import './App.scss';
 
-function App() {
-  return (
-      <div>
-        <Header />
+import './core/HttpInterceptor';
 
-        <div className="container py-4">
-          beginning...
+import Header from './Header';
+import MediaDetail from './MediaDetail';
+import PopularShows from './PopularShows';
+
+function App() {
+    return (
+        <div>
+            <Header/>
+
+            <div className="container py-4">
+
+                <Router>
+                    <Switch>
+                        <Route exact
+                               path='/'
+                               component={PopularShows}/>
+
+                        <Route exact
+                               path='/:id'
+                               component={MediaDetail}/>
+                    </Switch>
+                </Router>
+            </div>
         </div>
-      </div>
-  );
+    );
 }
 
 export default App;
