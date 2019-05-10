@@ -1,13 +1,13 @@
 import React from 'react';
 
 interface IProps {
-    msg: string;
+    msg: string | null;
 }
 
-const Error = (props: IProps) => (
+const ErrorMsg = (props: IProps) => (
     <div className="alert alert-warning" role="alert">
         { props.msg }
     </div>
 );
 
-export default Error;
+export default ErrorMsg;

@@ -5,9 +5,9 @@ import './App.scss';
 
 import './core/HttpInterceptor';
 
+import Home from './Home';
 import Header from './Header';
 import MediaDetail from './MediaDetail';
-import PopularShows from './PopularShows';
 
 function App() {
     return (
@@ -20,10 +20,14 @@ function App() {
                     <Switch>
                         <Route exact
                                path='/'
-                               component={PopularShows}/>
+                               component={Home}/>
 
                         <Route exact
-                               path='/:id'
+                               path='/tv-shows/:id'
+                               component={MediaDetail} />
+
+                        <Route exact
+                               path='/movies/:id'
                                component={MediaDetail}/>
                     </Switch>
                 </Router>

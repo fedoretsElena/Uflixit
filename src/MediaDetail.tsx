@@ -4,12 +4,14 @@ import axios from 'axios';
 import ApiConfig from './core/ApiConfig';
 
 import Loader from './Loader';
-import Error from './Error';
+import ErrorMsg from './ErrorMsg';
 
-import Media from './models/Media';
+import Movie from './models/Movie';
+import TVShow from './models/TVShow';
+import MediaFactory, { MediaType } from './models/MediaFactory';
 
 interface IState {
-    show: any,
+    media: TVShow | Movie | any,
     loaded: boolean,
     loading: boolean,
     error: string | null
@@ -17,14 +19,14 @@ interface IState {
 
 class MediaDetail extends Component<any> {
     state: IState = {
-        show: {},
+        media: {},
         error: null,
         loaded: false,
         loading: false
     };
 
     render() {
-        const {creators, stars, keywords, yearStarted, yearEnded, summary, rating, title, image, genres} = this.state.show;
+        const {creators, stars, keywords, yearStarted, yearEnded, summary, rating, title, image, genres} = this.state.media;
 
         return (
             <>
@@ -79,7 +81,8 @@ class MediaDetail extends Component<any> {
                         </div>
                     </section>
                 </div>}
-                {this.state.error && <Error msg={this.state.error}/>}
+
+                {this.state.error && <ErrorMsg msg={this.state.error}/>}
             </>
         );
     }
@@ -90,23 +93,28 @@ class MediaDetail extends Component<any> {
 
     private getShowDetail(): void {
         const {id} = this.props.match.params;
+        const type = this.props.location.pathname.indexOf('movie') !== -1 ? MediaType.Movie : MediaType.TVShow;
 
         this.setState({
             loading: true
         });
 
-        axios.get(ApiConfig.getShowDetailsPath.replace('{id}', id))
-            .then(show => {
+        axios.get(ApiConfig.getMediaDetailsPath
+            .replace('{id}', id)
+            .replace('{type}', type))
+            .then(data => {
+                const factory = new MediaFactory(type, data);
+
                 this.setState({
                     error: null,
                     loaded: true,
                     loading: false,
-                    show: new Media(show)
+                    media: factory.getMedia()
                 });
             })
             .catch(() => {
                 this.setState({
-                    error: 'Can not get details of game by id.'
+                    error: 'Can not get details by id.'
                 });
             });
     }

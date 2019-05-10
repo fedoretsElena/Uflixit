@@ -1,7 +1,7 @@
-interface IMedia {
+interface IBaseMedia {
 }
 
-class Media {
+class BaseMedia {
     id: string;
     title: string;
     rating: number;
@@ -13,11 +13,8 @@ class Media {
     keywords: string[];
     genres: string[];
     trailer: string;
-    creators: string[];
     summary: string;
-    yearStarted: string;
-    yearEnded: string;
-    status: string;
+    year: number;
 
     constructor(data: any) {
         this.id = data.imdb_id;
@@ -31,12 +28,9 @@ class Media {
         this.keywords = data.keywords.slice(0, 10);
         this.genres = data.genres;
         this.trailer = data.trailer;
-        this.creators = data.creators;
         this.summary = data.summary;
-        this.yearStarted = data.year_started || 'unknown';
-        this.yearEnded = data.year_ended || 'not yet';
-        this.status = data.status;
+        this.year = data.year;
     }
 }
 
-export default Media;
+export default BaseMedia;

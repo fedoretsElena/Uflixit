@@ -3,8 +3,9 @@ import axios from 'axios';
 
 import ApiConfig from './core/ApiConfig';
 
-import Error from './Error';
+import Title from './Title';
 import Loader from './Loader';
+import ErrorMsg from './ErrorMsg';
 import MediaList from './MediaList';
 
 interface IProps {
@@ -14,7 +15,7 @@ interface IState {
     shows: any[],
     loaded: boolean,
     loading: boolean,
-    error: string | null
+    error: null | string
 }
 
 class PopularShows extends Component<IProps, IState> {
@@ -30,11 +31,15 @@ class PopularShows extends Component<IProps, IState> {
     }
 
     render() {
+        const { shows, error } = this.state;
         return (
             <>
+                <Title title='Popular shows'
+                       length={shows.length} />
                 { this.state.loading && <Loader/> }
-                { this.state.loaded && <MediaList items={this.state.shows} /> }
-                { this.state.error && <Error msg={this.state.error} />}
+                { this.state.loaded && <MediaList items={shows}
+                                                  type='tv-shows' /> }
+                { this.state.error && <ErrorMsg msg={error} />}
             </>
         );
     }
@@ -48,8 +53,8 @@ class PopularShows extends Component<IProps, IState> {
             loading: true
         });
 
-        axios.get(ApiConfig.getPopularShowsPath)
-            .then((res: any) => this.getShowsPosters(res.slice(0, 15)))
+        axios.get(ApiConfig.getPopularTVShowsPath)
+            .then((res: any) => this.getShowsPosters(res.slice(0, 10)))
             .catch(() => this.setState({
                 loading: false,
                 error: 'Can not get ids of TV shows.'
@@ -83,7 +88,7 @@ class PopularShows extends Component<IProps, IState> {
     }
 
     private getShowsPoster(id: string): Promise<any> {
-        return axios.get(ApiConfig.getShowPosterPath.replace('{id}', id));
+        return axios.get(ApiConfig.getTVShowPosterPath.replace('{id}', id));
     }
 }
 

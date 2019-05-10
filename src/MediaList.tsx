@@ -3,19 +3,21 @@ import React, { Component } from 'react';
 import MediaItem from './MediaItem';
 
 interface IProps {
-    items: any[]
+    items: any[],
+    type: 'movies' | 'tv-shows'
 }
 
 class MediaList extends Component<IProps> {
 
     render() {
-        const { items } = this.props;
+        const { items, type } = this.props;
 
         return (
             <div className="card-group">
                 { items.map((item) => (
                     <MediaItem key={item.id}
-                               item={item} />
+                               item={item}
+                               type={type}/>
                     ))}
             </div>
         );
