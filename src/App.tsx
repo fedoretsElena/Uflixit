@@ -7,16 +7,19 @@ import './core/HttpInterceptor';
 
 import Home from './Home';
 import Header from './Header';
+import { Footer } from './Footer';
 import MediaDetail from './MediaDetail';
+import SearchResults from './SearchResults';
 
 function App() {
     return (
         <div>
-            <Header/>
+            <Router>
+                <Header/>
 
-            <div className="container py-4">
+                <div className="container py-4">
 
-                <Router>
+
                     <Switch>
                         <Route exact
                                path='/'
@@ -24,14 +27,20 @@ function App() {
 
                         <Route exact
                                path='/tv-shows/:id'
-                               component={MediaDetail} />
+                               component={MediaDetail}/>
 
                         <Route exact
                                path='/movies/:id'
                                component={MediaDetail}/>
+
+                        <Route path='/search'
+                               component={SearchResults}/>
                     </Switch>
-                </Router>
-            </div>
+
+                </div>
+
+                <Footer/>
+            </Router>
         </div>
     );
 }

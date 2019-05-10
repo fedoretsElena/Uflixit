@@ -3,8 +3,8 @@ import axios from 'axios';
 
 import ApiConfig from './core/ApiConfig';
 
-import Loader from './Loader';
-import ErrorMsg from './ErrorMsg';
+import Loader from './shared/Loader';
+import ErrorMsg from './shared/ErrorMsg';
 
 import Movie from './models/Movie';
 import TVShow from './models/TVShow';
@@ -26,7 +26,7 @@ class MediaDetail extends Component<any> {
     };
 
     render() {
-        const {creators, stars, keywords, yearStarted, yearEnded, summary, rating, title, image, genres} = this.state.media;
+        const {year, creators, stars, keywords, yearStarted, yearEnded, summary, rating, title, image, genres} = this.state.media;
 
         return (
             <>
@@ -45,10 +45,10 @@ class MediaDetail extends Component<any> {
 
                     <section className="col col-8">
                         <div className="d-flex justify-content-between align-items-center">
-                            <h1 className="mb-0">{title}</h1>
+                            <h1 className="mb-0 w-75">{title}</h1>
                             <span className="badge badge-warning">{rating}</span>
                         </div>
-                        <div className="mt-1 text-primary">{yearStarted} - {yearEnded}</div>
+                        <div className="mt-1 text-primary"> {yearStarted ? <span>{yearStarted} - {yearEnded}</span> : year} </div>
 
                         <div className="mt-5 w-75">
                             {summary}
@@ -62,7 +62,7 @@ class MediaDetail extends Component<any> {
 
                         <div className="row mt-4">
                             {creators && creators.length > 0 && <div className="col col-6">
-                                <h5>Creators:</h5>
+                                <h5>Creators</h5>
                                 <ul className="list-group list-group-flush">
                                     {creators.map((creator: string, i: number) =>
                                         <li key={i}
