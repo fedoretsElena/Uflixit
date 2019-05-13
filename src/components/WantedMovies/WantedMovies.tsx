@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 
 import ErrorMsg from '../shared/ErrorMsg';
 import Title from '../shared/Title';
 import Loader from '../shared/Loader';
 import MediaList from '../shared/MediaList';
-import ApiConfig from '../../core/ApiConfig';
+import { MediaType } from '../../models/MediaFactory';
+import MediaService from '../../services/mediaService';
+import BaseMedia from '../../models/BaseMedia';
 
 interface IState {
-    movies: any[],
+    movies: BaseMedia[],
     loaded: boolean,
     loading: boolean
     error: string | null,
@@ -21,6 +22,7 @@ class WantedMovies extends Component {
         loaded: false,
         loading: false
     };
+    mediaService: MediaService = new MediaService();
 
     render() {
         const {loaded, loading, error, movies} = this.state;
@@ -28,41 +30,27 @@ class WantedMovies extends Component {
         return (
             <>
                 <Title title='Wanted movies'
-                       length={movies.length} />
-                {loading && ( <Loader/> )}
-                {loaded && movies && ( <MediaList items={movies}
-                                                  type={'movies'} />)}
-                {error && !loading && (<ErrorMsg msg={error} />)}
+                       length={movies.length}/>
+                {loading && (<Loader/>)}
+                {loaded && movies && (<MediaList items={movies}
+                                                 type={MediaType.Movie}/>)}
+                {error && !loading && (<ErrorMsg msg={error}/>)}
             </>
         );
     }
 
     componentDidMount(): void {
 
-        this.getWantedMoviesIds()
-            .then(res => this.getWantedMoviesPosters(res));
+        this.getWantedMovies();
     }
 
-    private getWantedMoviesIds(): Promise<any> {
+    private getWantedMovies(): void {
         this.setState({
             loading: true
         });
 
-        return axios.get(ApiConfig.getWantedMoviesPath);
-    }
-
-    private getWantedMoviesPosters(ids: string[]): void {
-        let movies: { id?: string, poster?: string }[] = [...ids.map(id => {
-            return {id}
-        })];
-
-        axios.all(ids.map(id => axios.get(ApiConfig.getMoviePosterPath.replace('{id}', id))))
-            .then((res: any) => {
-
-                res.forEach((item: string, index: number) => {
-                    movies[index].poster = item;
-                });
-
+        this.mediaService.getWantedMoviesIds()
+            .then((movies: BaseMedia[]) => {
                 this.setState({
                     movies,
                     error: null,

@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-
-import ApiConfig from '../../core/ApiConfig';
 
 import Loader from '../shared/Loader';
 import ErrorMsg from '../shared/ErrorMsg';
 
 import Movie from '../../models/Movie';
 import TVShow from '../../models/TVShow';
-import MediaFactory, { MediaType } from '../../models/MediaFactory';
+import MediaService from '../../services/mediaService';
 
 interface IState {
     media: TVShow | Movie | any,
@@ -25,9 +22,11 @@ class MediaDetail extends Component<any> {
         loading: false
     };
 
+    mediaService = new MediaService();
+
     render() {
         const {year, creators, stars, keywords, yearStarted, yearEnded, summary, rating, title, image, genres} = this.state.media;
-
+        console.log(this.state.media);
         return (
             <>
                 {this.state.loading && !this.state.error && <Loader/>}
@@ -36,7 +35,7 @@ class MediaDetail extends Component<any> {
                     <div className="col col-4">
                         <img className="img-thumbnail mb-3"
                              src={image}
-                             alt="game-poster"/>
+                             alt="media-poster"/>
 
                         {genres.map((genre: string, i: number) =>
                             <span key={i}
@@ -48,7 +47,8 @@ class MediaDetail extends Component<any> {
                             <h1 className="mb-0 w-75">{title}</h1>
                             <span className="badge badge-warning">{rating}</span>
                         </div>
-                        <div className="mt-1 text-primary"> {yearStarted ? <span>{yearStarted} - {yearEnded}</span> : year} </div>
+                        <div className="mt-1 text-primary"> {yearStarted ?
+                            <span>{yearStarted} - {yearEnded}</span> : year} </div>
 
                         <div className="mt-5 w-75">
                             {summary}
@@ -88,28 +88,21 @@ class MediaDetail extends Component<any> {
     }
 
     componentDidMount(): void {
-        this.getShowDetail();
+        this.getDetail();
     }
 
-    private getShowDetail(): void {
-        const {id} = this.props.match.params;
-        const type = this.props.location.pathname.indexOf('movie') !== -1 ? MediaType.Movie : MediaType.TVShow;
-
+    private getDetail(): void {
         this.setState({
             loading: true
         });
 
-        axios.get(ApiConfig.getMediaDetailsPath
-            .replace('{id}', id)
-            .replace('{type}', type))
-            .then(data => {
-                const factory = new MediaFactory(type, data);
-
+        this.mediaService.getDetail(this.props.match.params.id, this.props.location)
+            .then((data: Movie | TVShow) => {
                 this.setState({
                     error: null,
                     loaded: true,
                     loading: false,
-                    media: factory.getMedia()
+                    media: data
                 });
             })
             .catch(() => {

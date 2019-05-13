@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-
-import ApiConfig from '../../core/ApiConfig';
 
 import Title from '../shared/Title';
 import Loader from '../shared/Loader';
 import ErrorMsg from '../shared/ErrorMsg';
 import MediaList from '../shared/MediaList';
-
+import MediaService from '../../services/mediaService';
+import BaseMedia from '../../models/BaseMedia';
+import { MediaType } from '../../models/MediaFactory';
 
 interface IProps {
 }
 
 interface IState {
-    shows: any[],
+    shows: BaseMedia[],
     loaded: boolean,
     loading: boolean,
     error: null | string
 }
 
 class PopularShows extends Component<IProps, IState> {
+    mediaService: MediaService;
+
     constructor(props: IProps) {
         super(props);
 
@@ -29,18 +30,20 @@ class PopularShows extends Component<IProps, IState> {
             loaded: false,
             loading: false
         };
+
+        this.mediaService = new MediaService();
     }
 
     render() {
-        const { shows, error } = this.state;
+        const {shows, error} = this.state;
         return (
             <>
                 <Title title='Popular shows'
-                       length={shows.length} />
-                { this.state.loading && <Loader/> }
-                { this.state.loaded && <MediaList items={shows}
-                                                  type='tv-shows' /> }
-                { this.state.error && <ErrorMsg msg={error} />}
+                       length={shows.length}/>
+                {this.state.loading && <Loader/>}
+                {this.state.loaded && <MediaList items={shows}
+                                                 type={MediaType.TVShow} />}
+                {this.state.error && <ErrorMsg msg={error}/>}
             </>
         );
     }
@@ -54,25 +57,8 @@ class PopularShows extends Component<IProps, IState> {
             loading: true
         });
 
-        axios.get(ApiConfig.getPopularTVShowsPath)
-            .then((res: any) => this.getShowsPosters(res.slice(0, 10)))
-            .catch(() => this.setState({
-                loading: false,
-                error: 'Can not get ids of TV shows.'
-            }));
-    }
-
-    private getShowsPosters(ids: string[]): void {
-        let shows: { id?: string, poster?: string }[] = [...ids.map(id => {
-            return {id}
-        })];
-
-        axios.all(ids.map(id => this.getShowsPoster(id)))
-            .then((res: string[]) => {
-
-                res.forEach((item, index) => {
-                    shows[index].poster = item;
-                });
+        this.mediaService.getPopularShows()
+            .then((shows: BaseMedia[]) => {
 
                 this.setState({
                     shows,
@@ -82,14 +68,10 @@ class PopularShows extends Component<IProps, IState> {
                 });
             })
             .catch(() => this.setState({
-                loading: false,
-                error: 'Can not get posters of TV shows using ids.'
-            })
-        );
-    }
-
-    private getShowsPoster(id: string): Promise<any> {
-        return axios.get(ApiConfig.getTVShowPosterPath.replace('{id}', id));
+                    loading: false,
+                    error: 'Can not get posters of TV shows using ids.'
+                })
+            );
     }
 }
 

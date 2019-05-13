@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 
 import MediaItem from './MediaItem';
+import { MediaType } from '../../../models/MediaFactory';
 
 interface IProps {
     items: any[],
-    type: 'movies' | 'tv-shows'
+    type: MediaType
 }
 
 class MediaList extends Component<IProps> {
@@ -17,7 +18,7 @@ class MediaList extends Component<IProps> {
                 { items.map((item) => (
                     <MediaItem key={item.id}
                                item={item}
-                               type={type}/>
+                               type={type} />
                     ))}
             </div>
         );

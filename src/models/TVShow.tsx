@@ -1,9 +1,9 @@
-import BaseMedia from './BaseMedia';
+import Media from './Media';
 
 interface ITVShow {
 }
 
-class TVShow extends BaseMedia {
+class TVShow extends Media {
     creators: string[];
     yearStarted: string;
     yearEnded: string;
