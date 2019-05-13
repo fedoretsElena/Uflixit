@@ -10,7 +10,6 @@ class MediaFactory {
     private readonly _media: Movie | TVShow;
 
     constructor(type: MediaType, data: any) {
-        console.log(type);
         this._media = type === MediaType.Movie ? new Movie(data) : new TVShow(data);
     }
 

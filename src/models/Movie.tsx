@@ -1,9 +1,9 @@
-import BaseMedia from './BaseMedia';
+import Media from './Media';
 
 interface IMovie {
 }
 
-class Movie  extends BaseMedia {
+class Movie  extends Media {
     director: string;
 
     constructor(data: any) {

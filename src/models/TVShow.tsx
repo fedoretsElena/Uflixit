@@ -1,9 +1,9 @@
-import BaseMedia from './BaseMedia';
+import Media from './Media';
 
 interface ITVShow {
 }
 
-class TVShow extends BaseMedia {
+class TVShow extends Media {
     creators: string[];
     yearStarted: string;
     yearEnded: string;
@@ -11,7 +11,7 @@ class TVShow extends BaseMedia {
 
     constructor(data: any) {
         super(data);
-        console.log(data);
+
         this.creators = data.creators;
         this.yearStarted = data.year_started || 'unknown';
         this.yearEnded = data.year_ended || 'not yet';
