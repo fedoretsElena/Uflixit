@@ -1,16 +1,20 @@
 .card {
-   min-width: 200px;
-   transition: .4s box-shadow;
+  max-width: 25%;
+  min-width: 200px;
 
-   &__img {
-     transition: .6s transform ease-out;
-   }
+  &__img {
+    transition: .6s transform ease-out;
 
-   &:hover {
-     box-shadow: -3px 1px 18px 0px #928c8d;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
 
-     .card__img {
-       transform: scale(1.05);
-     }
-   }
- }
+  &__img-wrapper {
+    transition: .4s box-shadow;
+
+    &:hover {
+      box-shadow: -3px 1px 18px 0px #928c8d;
+    }
+  }
+}

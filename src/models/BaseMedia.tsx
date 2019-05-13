@@ -12,7 +12,7 @@ class BaseMedia {
 
     constructor(data: IBaseMedia) {
         this.id = data.imdb_id || data.id;
-        this.image = data.image || '';
+        this.image = data.image || 'https://cdns.directv.com/cms2/my_directv/general/lg__celebrity_generic.jpg';
         this.title = data.title || '';
     }
 }

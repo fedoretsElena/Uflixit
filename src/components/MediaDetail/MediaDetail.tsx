@@ -26,7 +26,7 @@ class MediaDetail extends Component<any> {
 
     render() {
         const {year, creators, stars, keywords, yearStarted, yearEnded, summary, rating, title, image, genres} = this.state.media;
-        console.log(this.state.media);
+
         return (
             <>
                 {this.state.loading && !this.state.error && <Loader/>}

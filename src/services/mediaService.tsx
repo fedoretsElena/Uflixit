@@ -11,12 +11,14 @@ export class MediaService {
     getPopularShows(): Promise<BaseMedia[]> {
 
         return axios.get(ApiConfig.getPopularTVShowsPath)
+            .then((ids: any) => this.convertToObj(ids))
             .then((res: any) => this.getPosters(res.slice(0, 10), MediaType.TVShow));
     }
 
     getWantedMoviesIds(): Promise<BaseMedia[]> {
 
         return axios.get(ApiConfig.getWantedMoviesPath)
+            .then((ids: any) => this.convertToObj(ids))
             .then((res: any) => this.getPosters(res, MediaType.Movie));
     }
 
@@ -29,12 +31,18 @@ export class MediaService {
             });
     }
 
-    private getPosters(ids: string[], type: MediaType): Promise<BaseMedia[]> {
-        let media: IBaseMedia[] = [...ids.map(id => {
-            return {id}
-        })];
+    search(params: URLSearchParams,
+           type: MediaType = MediaType.TVShow): Promise<any> {
 
-        return axios.all(ids.map(id => this.getPoster(id, type)))
+        return axios.get(this.prepareApiPath(ApiConfig.getMediaSearchPath, '', type + 's'), {params})
+            .then((res) => Array.isArray(res) ? res : [res])
+            .then((res: any) => res.map((i: IBaseMedia) => new BaseMedia(i)))
+            .then((res: BaseMedia[]) => this.getPosters(res))
+    }
+
+    private getPosters(media: IBaseMedia[], type: MediaType = MediaType.TVShow): Promise<BaseMedia[]> {
+
+        return axios.all(media.map(item => this.getPoster(item.id, type)))
             .then((res: string[]) => {
 
                 res.forEach((item, index) => {
@@ -49,11 +57,16 @@ export class MediaService {
         return axios.get(this.prepareApiPath(ApiConfig.getMediaPosterPath, id, type));
     }
 
-    private prepareApiPath(path: string, id: string, type: MediaType): string {
+    private prepareApiPath(path: string, id: string, type: MediaType | string): string {
         return path.replace('{id}', id)
-            .replace('{type}', type);
+                   .replace('{type}', type);
     }
 
+    private convertToObj(ids: string[]): IBaseMedia[] {
+        return ids.map((id: string) => {
+            return {id};
+        });
+    }
 }
 
 export default MediaService;

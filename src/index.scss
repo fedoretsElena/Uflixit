@@ -7,6 +7,13 @@ body {
   font-family: medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
+a {
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 // move
 
 .bg-dark {

@@ -1,10 +1,9 @@
-import React, { Component, FormEvent } from 'react';
+import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { IoIosSearch } from 'react-icons/io';
 
 import './SearchForm.scss';
 import Input from '../../shared/Input';
-
 
 class SearchForm extends Component {
     state = {
@@ -15,8 +14,6 @@ class SearchForm extends Component {
 
     render() {
         const {active, redirectToReferrer, search} = this.state;
-
-        if (redirectToReferrer) return <Redirect to={{ pathname: 'search', search: `?query=${search}` }} />;
 
         return (
             <form className="search-form d-flex align-items-center"
@@ -31,9 +28,22 @@ class SearchForm extends Component {
                        lostFocus={ this.closeSearchField }
                        searchChanged={ this.handleSearchChange }
                 />
+
+                {redirectToReferrer && <Redirect to={{ pathname: './search', search: `?query=${search}` }} />}
+
             </form>
         );
     };
+
+    componentDidUpdate(): void {
+
+        if (this.state.redirectToReferrer) {
+
+            this.setState({
+                redirectToReferrer: false
+            });
+        }
+    }
 
     openSearchField = () => {
 
@@ -50,7 +60,7 @@ class SearchForm extends Component {
         })
     };
 
-    navigateToSearchPage = (e: FormEvent) => {
+    navigateToSearchPage = (e: any) => {
         e.preventDefault();
 
         this.setState({
