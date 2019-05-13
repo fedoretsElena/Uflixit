@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import ApiConfig from './core/ApiConfig';
+import ApiConfig from '../../core/ApiConfig';
 
-import Title from './shared/Title';
-import Loader from './shared/Loader';
-import ErrorMsg from './shared/ErrorMsg';
-import MediaList from './shared/MediaList';
+import Title from '../shared/Title';
+import Loader from '../shared/Loader';
+import ErrorMsg from '../shared/ErrorMsg';
+import MediaList from '../shared/MediaList';
+
 
 interface IProps {
 }

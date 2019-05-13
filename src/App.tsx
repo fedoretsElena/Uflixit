@@ -5,11 +5,11 @@ import './App.scss';
 
 import './core/HttpInterceptor';
 
-import Home from './Home';
-import Header from './Header';
-import { Footer } from './Footer';
-import MediaDetail from './MediaDetail';
-import SearchResults from './SearchResults';
+import Home from './components/Home';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import MediaDetail from './components/MediaDetail';
+import SearchResults from './components/SearchResults';
 
 function App() {
     return (

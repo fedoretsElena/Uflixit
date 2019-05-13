@@ -9,6 +9,7 @@ class ApiConfig {
     static getMoviePosterPath = `${ApiConfig.API}movie/poster/{id}`;
 
     static getMediaDetailsPath = `${ApiConfig.API}{type}/details/{id}`;
+    static getMediaSearchPath = `${ApiConfig.API}{type}/search`;
 
 };
 

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import ErrorMsg from './shared/ErrorMsg';
-import Title from './shared/Title';
-import Loader from './shared/Loader';
-import MediaList from './shared/MediaList';
-import ApiConfig from './core/ApiConfig';
+import ErrorMsg from '../shared/ErrorMsg';
+import Title from '../shared/Title';
+import Loader from '../shared/Loader';
+import MediaList from '../shared/MediaList';
+import ApiConfig from '../../core/ApiConfig';
 
 interface IState {
     movies: any[],

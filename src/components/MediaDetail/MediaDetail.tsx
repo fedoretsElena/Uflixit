@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import ApiConfig from './core/ApiConfig';
+import ApiConfig from '../../core/ApiConfig';
 
-import Loader from './shared/Loader';
-import ErrorMsg from './shared/ErrorMsg';
+import Loader from '../shared/Loader';
+import ErrorMsg from '../shared/ErrorMsg';
 
-import Movie from './models/Movie';
-import TVShow from './models/TVShow';
-import MediaFactory, { MediaType } from './models/MediaFactory';
+import Movie from '../../models/Movie';
+import TVShow from '../../models/TVShow';
+import MediaFactory, { MediaType } from '../../models/MediaFactory';
 
 interface IState {
     media: TVShow | Movie | any,
