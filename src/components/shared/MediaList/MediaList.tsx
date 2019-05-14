@@ -1,24 +1,21 @@
 import React, { Component } from 'react';
 
 import MediaItem from './MediaItem';
-import { MediaType } from '../../../models/MediaFactory';
 
 interface IProps {
-    items: any[],
-    type: MediaType
+    items: any[]
 }
 
 class MediaList extends Component<IProps> {
 
     render() {
-        const { items, type } = this.props;
+        const { items } = this.props;
 
         return (
             <div className="card-group">
                 { items.map((item) => (
                     <MediaItem key={item.id}
-                               item={item}
-                               type={type} />
+                               item={item}  />
                     ))}
             </div>
         );

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { UnregisterCallback } from 'history';
+import axios, { AxiosRequestConfig } from 'axios';
 
 import Title from '../shared/Title';
 import Loader from '../shared/Loader';
 import ErrorMsg from '../shared/ErrorMsg';
 import MediaList from '../shared/MediaList';
 import BaseMedia from '../../models/BaseMedia';
-import { MediaType } from '../../models/MediaFactory';
 import MediaService from '../../services/mediaService';
 
 interface IProps {
@@ -15,14 +15,17 @@ interface IProps {
 }
 
 interface IStore {
-    media: any;
+    media: BaseMedia[];
     loading: boolean;
     loaded: boolean;
     error: string | null;
 }
 
 class SearchResults extends Component<IProps, IStore> {
-    stopListenRoute: UnregisterCallback = () => {};
+    stopListenRoute: UnregisterCallback = () => {
+    };
+    cancelSearchRequest: Function = () => {
+    };
     mediaService: MediaService = new MediaService();
     state: IStore = {
         loading: false,
@@ -32,7 +35,7 @@ class SearchResults extends Component<IProps, IStore> {
     };
 
     render() {
-        const { media, loaded, loading, error } = this.state;
+        const {media, loaded, loading, error} = this.state;
 
         return (
             <>
@@ -40,22 +43,20 @@ class SearchResults extends Component<IProps, IStore> {
                        length={media.length}
                 />
                 {loading && !error && <Loader/>}
-                {loaded && <MediaList items={media}
-                                      type={MediaType.TVShow} />}
+                {loaded && <MediaList items={media} />}
                 {error && <ErrorMsg msg={error}/>}
             </>
         )
     }
 
     componentDidMount(): void {
-        console.log('searching!');
-
         this.search();
         this.startListenRouteChanges();
     }
 
+    // TODO: there is warning about memory leak, BUT request is canceled and route changes aren't listening
     componentWillUnmount(): void {
-        console.log('stop!');
+        this.cancelSearchRequest();
         this.stopListenRoute();
     }
 
@@ -68,9 +69,18 @@ class SearchResults extends Component<IProps, IStore> {
             loading: true
         });
 
-        this.mediaService.search(params)
+        const config: AxiosRequestConfig = {
+            params,
+            cancelToken: new axios.CancelToken((c) => {
+                // An executor function receives a cancel function as a parameter
+                this.cancelSearchRequest = c;
+            })
+        };
+
+        this.mediaService.search(config)
             .then((res: BaseMedia[]) => {
-                this.setState({
+
+                    this.setState({
                         media: res,
                         loaded: true,
                         loading: false,

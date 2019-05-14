@@ -1,4 +1,5 @@
 import Media from './Media';
+import { MediaType } from './MediaFactory';
 
 interface ITVShow {
 }
@@ -10,7 +11,7 @@ class TVShow extends Media {
     status: string;
 
     constructor(data: any) {
-        super(data);
+        super(data, MediaType.TVShow);
 
         this.creators = data.creators;
         this.yearStarted = data.year_started || 'unknown';

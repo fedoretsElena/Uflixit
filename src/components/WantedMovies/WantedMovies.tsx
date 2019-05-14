@@ -4,7 +4,6 @@ import ErrorMsg from '../shared/ErrorMsg';
 import Title from '../shared/Title';
 import Loader from '../shared/Loader';
 import MediaList from '../shared/MediaList';
-import { MediaType } from '../../models/MediaFactory';
 import MediaService from '../../services/mediaService';
 import BaseMedia from '../../models/BaseMedia';
 
@@ -32,8 +31,7 @@ class WantedMovies extends Component {
                 <Title title='Wanted movies'
                        length={movies.length}/>
                 {loading && (<Loader/>)}
-                {loaded && movies && (<MediaList items={movies}
-                                                 type={MediaType.Movie}/>)}
+                {loaded && movies && (<MediaList items={movies} />)}
                 {error && !loading && (<ErrorMsg msg={error}/>)}
             </>
         );

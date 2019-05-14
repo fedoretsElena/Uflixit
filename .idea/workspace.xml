@@ -2,14 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3df03ab5-3ce7-478e-8912-d1babbf003d3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/SearchForm/SearchForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/SearchForm/SearchForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MediaDetail/MediaDetail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MediaDetail/MediaDetail.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PopularShows/PopularShows.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PopularShows/PopularShows.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/SearchResults/SearchResults.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchResults/SearchResults.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SearchResults/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchResults/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/MediaList/MediaItem/MediaItem.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/MediaList/MediaItem/MediaItem.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WantedMovies/WantedMovies.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WantedMovies/WantedMovies.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/shared/MediaList/MediaItem/MediaItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/MediaList/MediaItem/MediaItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/MediaList/MediaList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/MediaList/MediaList.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/BaseMedia.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/BaseMedia.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Media.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Media.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/MediaFactory.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/MediaFactory.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Movie.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Movie.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/TVShow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/TVShow.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/mediaService.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/mediaService.tsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -22,32 +26,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/SearchResults/SearchResults.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="59" column="5" lean-forward="true" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/Header/SearchForm/SearchForm.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-587">
-              <caret line="23" lean-forward="true" selection-start-line="7" selection-start-column="30" selection-end-line="23" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -57,6 +36,7 @@
       <find>poster</find>
       <find>game</find>
       <find>browserHistory</find>
+      <find>stopListenRoute</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\Olena_Fedorets\WebstormProjects\Uflixit\src\shared</dir>
@@ -71,7 +51,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/WantedMovies.tsx" />
         <option value="$PROJECT_DIR$/src/PopularShows.tsx" />
-        <option value="$PROJECT_DIR$/src/models/MediaFactory.tsx" />
         <option value="$PROJECT_DIR$/src/ContactForm.tsx" />
         <option value="$PROJECT_DIR$/src/App.scss" />
         <option value="$PROJECT_DIR$/src/index.tsx" />
@@ -103,23 +82,24 @@
         <option value="$PROJECT_DIR$/src/components/Footer/Footer.scss" />
         <option value="$PROJECT_DIR$/src/components/Footer/Footer.tsx" />
         <option value="$PROJECT_DIR$/src/core/ApiConfig.tsx" />
-        <option value="$PROJECT_DIR$/src/models/Media.tsx" />
-        <option value="$PROJECT_DIR$/src/components/PopularShows/PopularShows.tsx" />
-        <option value="$PROJECT_DIR$/src/components/WantedMovies/WantedMovies.tsx" />
-        <option value="$PROJECT_DIR$/src/components/shared/MediaList/MediaList.tsx" />
-        <option value="$PROJECT_DIR$/src/models/Movie.tsx" />
-        <option value="$PROJECT_DIR$/src/models/TVShow.tsx" />
-        <option value="$PROJECT_DIR$/src/components/MediaDetail/MediaDetail.tsx" />
         <option value="$PROJECT_DIR$/src/App.tsx" />
         <option value="$PROJECT_DIR$/src/components/SearchResults/index.ts" />
         <option value="$PROJECT_DIR$/src/components/shared/Input/Input.tsx" />
-        <option value="$PROJECT_DIR$/src/models/BaseMedia.tsx" />
         <option value="$PROJECT_DIR$/src/index.scss" />
         <option value="$PROJECT_DIR$/src/components/shared/MediaList/MediaItem/MediaItem.scss" />
-        <option value="$PROJECT_DIR$/src/services/mediaService.tsx" />
-        <option value="$PROJECT_DIR$/src/components/shared/MediaList/MediaItem/MediaItem.tsx" />
-        <option value="$PROJECT_DIR$/src/components/SearchResults/SearchResults.tsx" />
         <option value="$PROJECT_DIR$/src/components/Header/SearchForm/SearchForm.tsx" />
+        <option value="$PROJECT_DIR$/src/models/Movie.tsx" />
+        <option value="$PROJECT_DIR$/src/models/Media.tsx" />
+        <option value="$PROJECT_DIR$/src/models/TVShow.tsx" />
+        <option value="$PROJECT_DIR$/src/components/shared/MediaList/MediaList.tsx" />
+        <option value="$PROJECT_DIR$/src/components/MediaDetail/MediaDetail.tsx" />
+        <option value="$PROJECT_DIR$/src/components/SearchResults/SearchResults.tsx" />
+        <option value="$PROJECT_DIR$/src/components/PopularShows/PopularShows.tsx" />
+        <option value="$PROJECT_DIR$/src/components/WantedMovies/WantedMovies.tsx" />
+        <option value="$PROJECT_DIR$/src/components/shared/MediaList/MediaItem/MediaItem.tsx" />
+        <option value="$PROJECT_DIR$/src/models/MediaFactory.tsx" />
+        <option value="$PROJECT_DIR$/src/services/mediaService.tsx" />
+        <option value="$PROJECT_DIR$/src/models/BaseMedia.tsx" />
       </list>
     </option>
   </component>
@@ -133,7 +113,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -157,15 +136,21 @@
               <item name="Uflixit" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Header" type="462c0819:PsiDirectoryNode" />
+              <item name="MediaDetail" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Uflixit" type="b2602c69:ProjectViewProjectNode" />
               <item name="Uflixit" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Header" type="462c0819:PsiDirectoryNode" />
-              <item name="SearchForm" type="462c0819:PsiDirectoryNode" />
+              <item name="PopularShows" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Uflixit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Uflixit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="SearchResults" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Uflixit" type="b2602c69:ProjectViewProjectNode" />
@@ -178,12 +163,43 @@
               <item name="Uflixit" type="b2602c69:ProjectViewProjectNode" />
               <item name="Uflixit" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="shared" type="462c0819:PsiDirectoryNode" />
+              <item name="MediaList" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Uflixit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Uflixit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="shared" type="462c0819:PsiDirectoryNode" />
+              <item name="MediaList" type="462c0819:PsiDirectoryNode" />
+              <item name="MediaItem" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Uflixit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Uflixit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="WantedMovies" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Uflixit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Uflixit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Uflixit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Uflixit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -237,18 +253,18 @@
       <workItem from="1557314085101" duration="16671000" />
       <workItem from="1557477733992" duration="19184000" />
       <workItem from="1557733737697" duration="8353000" />
-      <workItem from="1557744837283" duration="14987000" />
+      <workItem from="1557744837283" duration="16559000" />
+      <workItem from="1557820767040" duration="10207000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64503000" />
+    <option name="totallyTimeSpent" value="76282000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -263,7 +279,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.26435536" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.26435536" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -281,14 +297,12 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/node_modules/@types/react/index.d.ts</url>
           <line>1052</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Footer.tsx" />
     <entry file="file://$PROJECT_DIR$/src/App.scss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -455,58 +469,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/WantedMovies/WantedMovies.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/shared/MediaList/MediaList.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@babel/types/lib/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="701">
           <caret line="163" column="21" selection-start-line="163" selection-start-column="21" selection-end-line="163" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/Media.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/Movie.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/TVShow.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/MediaFactory.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -530,47 +496,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="31" column="36" lean-forward="true" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/BaseMedia.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/SearchResults/index.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="29" selection-start-column="29" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/PopularShows/PopularShows.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="44" column="73" selection-start-line="44" selection-start-column="73" selection-end-line="44" selection-end-column="73" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MediaDetail/MediaDetail.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1827">
-          <caret line="99" column="45" lean-forward="true" selection-start-line="99" selection-start-column="45" selection-end-line="99" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -581,30 +510,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/shared/MediaList/MediaItem/MediaItem.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="31" column="23" lean-forward="true" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/services/mediaService.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-104">
-          <caret line="42" column="103" selection-start-line="42" selection-start-column="103" selection-end-line="42" selection-end-column="103" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -617,13 +526,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/history/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="22" column="58" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -631,20 +533,151 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/SearchResults/SearchResults.tsx">
+    <entry file="file://$PROJECT_DIR$/node_modules/@types/history/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="59" column="5" lean-forward="true" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+        <state relative-caret-position="84">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/axios/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="36" column="55" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="55" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Header/SearchForm/SearchForm.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-587">
-          <caret line="23" lean-forward="true" selection-start-line="7" selection-start-column="30" selection-end-line="23" />
+        <state relative-caret-position="189">
+          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/Movie.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/TVShow.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="22" lean-forward="true" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/PopularShows/PopularShows.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-923">
+          <caret line="7" column="47" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/shared/MediaList/MediaItem/MediaItem.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/Media.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/MediaFactory.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/shared/MediaList/MediaList.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/WantedMovies/WantedMovies.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SearchResults/SearchResults.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-588">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/services/mediaService.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="78" column="58" selection-start-line="78" selection-start-column="58" selection-end-line="78" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/BaseMedia.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MediaDetail/MediaDetail.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1700">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="31" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

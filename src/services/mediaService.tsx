@@ -1,10 +1,10 @@
-import axios from 'axios';
+import axios, { AxiosRequestConfig } from 'axios';
 
 import ApiConfig from '../core/ApiConfig';
-import MediaFactory, { MediaType } from '../models/MediaFactory';
-import BaseMedia, { IBaseMedia } from '../models/BaseMedia';
 import Movie from '../models/Movie';
 import TVShow from '../models/TVShow';
+import BaseMedia, { IBaseMedia } from '../models/BaseMedia';
+import MediaFactory, { MediaType } from '../models/MediaFactory';
 
 export class MediaService {
 
@@ -31,41 +31,52 @@ export class MediaService {
             });
     }
 
-    search(params: URLSearchParams,
-           type: MediaType = MediaType.TVShow): Promise<any> {
+    search(config: AxiosRequestConfig): Promise<any> {
+        const requests = [axios.get(this.prepareApiPath(ApiConfig.getMediaSearchPath, '', MediaType.Movie + 's'), config),
+                          axios.get(this.prepareApiPath(ApiConfig.getMediaSearchPath, '', MediaType.TVShow + 's'), config)];
 
-        return axios.get(this.prepareApiPath(ApiConfig.getMediaSearchPath, '', type + 's'), {params})
-            .then((res) => Array.isArray(res) ? res : [res])
-            .then((res: any) => res.map((i: IBaseMedia) => new BaseMedia(i)))
-            .then((res: BaseMedia[]) => this.getPosters(res))
+        return axios.all(requests)
+            .then(axios.spread((movies: IBaseMedia, tvShows: any) => {
+                // Both requests are now complete
+                return axios.all([this.getPosters(this.prepareSearchRes(movies), MediaType.Movie),
+                    this.getPosters(this.prepareSearchRes(tvShows), MediaType.TVShow)])
+                    .then(res => [...res[0], ...res[1]]);
+            }));
     }
 
-    private getPosters(media: IBaseMedia[], type: MediaType = MediaType.TVShow): Promise<BaseMedia[]> {
+    private getPosters(media: IBaseMedia[], type: MediaType): Promise<BaseMedia[]> {
 
-        return axios.all(media.map(item => this.getPoster(item.id, type)))
+        return axios.all(media.map(item => this.getPoster(item, type)))
             .then((res: string[]) => {
 
                 res.forEach((item, index) => {
                     media[index].image = item;
                 });
 
-                return media.map(i => new BaseMedia(i));
+                return media.map(i => new BaseMedia(i, type));
             });
     }
 
-    private getPoster(id: string, type: MediaType): Promise<any> {
-        return axios.get(this.prepareApiPath(ApiConfig.getMediaPosterPath, id, type));
+    private getPoster(media: IBaseMedia, type: MediaType): Promise<any> {
+        return axios.get(this.prepareApiPath(ApiConfig.getMediaPosterPath, media.id, type))
+            .catch(() => media.image);
     }
 
     private prepareApiPath(path: string, id: string, type: MediaType | string): string {
         return path.replace('{id}', id)
-                   .replace('{type}', type);
+            .replace('{type}', type);
     }
 
     private convertToObj(ids: string[]): IBaseMedia[] {
         return ids.map((id: string) => {
             return {id};
         });
+    }
+
+    private prepareSearchRes(media: IBaseMedia | IBaseMedia[]): BaseMedia[] {
+        let result: IBaseMedia[] = Array.isArray(media) ? media : [media];
+
+        return result.map((item: IBaseMedia) => new BaseMedia(item, MediaType.Another));
     }
 }
 

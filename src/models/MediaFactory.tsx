@@ -3,7 +3,8 @@ import TVShow from './TVShow';
 
 export enum MediaType {
     Movie = 'movie',
-    TVShow = 'tv-show'
+    TVShow = 'tv-show',
+    Another = 'another'
 }
 
 class MediaFactory {
