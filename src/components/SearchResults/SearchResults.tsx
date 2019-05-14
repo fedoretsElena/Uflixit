@@ -7,7 +7,7 @@ import Loader from '../shared/Loader';
 import ErrorMsg from '../shared/ErrorMsg';
 import MediaList from '../shared/MediaList';
 import BaseMedia from '../../models/BaseMedia';
-import MediaService from '../../services/mediaService';
+import MediaService from '../../services/MediaService';
 
 interface IProps {
     location: any,

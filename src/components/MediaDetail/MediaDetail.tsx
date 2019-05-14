@@ -5,7 +5,7 @@ import ErrorMsg from '../shared/ErrorMsg';
 
 import Movie from '../../models/Movie';
 import TVShow from '../../models/TVShow';
-import MediaService from '../../services/mediaService';
+import MediaService from '../../services/MediaService';
 
 interface IState {
     media: TVShow | Movie | any,
