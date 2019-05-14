@@ -29,7 +29,7 @@ class SearchForm extends Component {
                        searchChanged={ this.handleSearchChange }
                 />
 
-                {redirectToReferrer && <Redirect to={{ pathname: './search', search: `?query=${search}` }} />}
+                {redirectToReferrer && <Redirect to={{ pathname: '../search', search: `?query=${search}` }} />}
 
             </form>
         );
@@ -57,7 +57,7 @@ class SearchForm extends Component {
         this.setState({
             search: '',
             active: false
-        })
+        });
     };
 
     navigateToSearchPage = (e: any) => {

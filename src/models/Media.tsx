@@ -1,4 +1,5 @@
 import BaseMedia from './BaseMedia';
+import { MediaType } from './MediaFactory';
 
 interface IMedia {
 }
@@ -15,8 +16,8 @@ class Media extends BaseMedia{
     summary: string;
     year: number;
 
-    constructor(data: any) {
-        super(data);
+    constructor(data: any, type: MediaType) {
+        super(data, type);
 
         this.rating = data.rating;
         this.duration = data.duration;

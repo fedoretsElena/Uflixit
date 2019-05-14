@@ -6,7 +6,6 @@ import ErrorMsg from '../shared/ErrorMsg';
 import MediaList from '../shared/MediaList';
 import MediaService from '../../services/mediaService';
 import BaseMedia from '../../models/BaseMedia';
-import { MediaType } from '../../models/MediaFactory';
 
 interface IProps {
 }
@@ -41,8 +40,7 @@ class PopularShows extends Component<IProps, IState> {
                 <Title title='Popular shows'
                        length={shows.length}/>
                 {this.state.loading && <Loader/>}
-                {this.state.loaded && <MediaList items={shows}
-                                                 type={MediaType.TVShow} />}
+                {this.state.loaded && <MediaList items={shows} />}
                 {this.state.error && <ErrorMsg msg={error}/>}
             </>
         );

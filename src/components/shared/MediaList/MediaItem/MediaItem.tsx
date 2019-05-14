@@ -2,22 +2,21 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import './MediaItem.scss';
-import { MediaType } from '../../../../models/MediaFactory';
+import BaseMedia from '../../../../models/BaseMedia';
 
 interface IProps {
-    item: any;
-    type: MediaType
+    item: BaseMedia;
 }
 
 class MediaItem extends Component<IProps> {
 
     render() {
-        const {id, image, title} = this.props.item;
+        const {id, image, title, type} = this.props.item;
 
         return (
             <>
                 <Link className="card mr-3 mb-3 border-0 rounded"
-                      to={`/${this.props.type}s/${id}`}
+                      to={`/${type}s/${id}`}
                 >
                     <div className="card__img-wrapper overflow-hidden">
                         <img src={image}
