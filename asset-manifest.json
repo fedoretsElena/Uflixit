@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Uflixit/static/css/main.0fd89b1c.chunk.css",
-    "main.js": "/Uflixit/static/js/main.85618328.chunk.js",
-    "main.js.map": "/Uflixit/static/js/main.85618328.chunk.js.map",
+    "main.js": "/Uflixit/static/js/main.6be1219f.chunk.js",
+    "main.js.map": "/Uflixit/static/js/main.6be1219f.chunk.js.map",
     "runtime~main.js": "/Uflixit/static/js/runtime~main.58f247f9.js",
     "runtime~main.js.map": "/Uflixit/static/js/runtime~main.58f247f9.js.map",
     "static/css/2.266e55a5.chunk.css": "/Uflixit/static/css/2.266e55a5.chunk.css",
     "static/js/2.b1c2f6e9.chunk.js": "/Uflixit/static/js/2.b1c2f6e9.chunk.js",
     "static/js/2.b1c2f6e9.chunk.js.map": "/Uflixit/static/js/2.b1c2f6e9.chunk.js.map",
     "index.html": "/Uflixit/index.html",
-    "precache-manifest.20af4ced6a2e3389064ec6acc5324fe5.js": "/Uflixit/precache-manifest.20af4ced6a2e3389064ec6acc5324fe5.js",
+    "precache-manifest.aa84239ef4061da8c65a945d70e20ab1.js": "/Uflixit/precache-manifest.aa84239ef4061da8c65a945d70e20ab1.js",
     "service-worker.js": "/Uflixit/service-worker.js",
     "static/css/2.266e55a5.chunk.css.map": "/Uflixit/static/css/2.266e55a5.chunk.css.map",
     "static/css/main.0fd89b1c.chunk.css.map": "/Uflixit/static/css/main.0fd89b1c.chunk.css.map"
