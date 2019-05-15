@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Uflixit/static/css/main.0fd89b1c.chunk.css",
+    "main.js": "/Uflixit/static/js/main.da247b6a.chunk.js",
+    "main.js.map": "/Uflixit/static/js/main.da247b6a.chunk.js.map",
+    "runtime~main.js": "/Uflixit/static/js/runtime~main.58f247f9.js",
+    "runtime~main.js.map": "/Uflixit/static/js/runtime~main.58f247f9.js.map",
+    "static/css/2.266e55a5.chunk.css": "/Uflixit/static/css/2.266e55a5.chunk.css",
+    "static/js/2.13215c00.chunk.js": "/Uflixit/static/js/2.13215c00.chunk.js",
+    "static/js/2.13215c00.chunk.js.map": "/Uflixit/static/js/2.13215c00.chunk.js.map",
+    "index.html": "/Uflixit/index.html",
+    "precache-manifest.aec495cf34185ed87418ab3a60b1f7c5.js": "/Uflixit/precache-manifest.aec495cf34185ed87418ab3a60b1f7c5.js",
+    "service-worker.js": "/Uflixit/service-worker.js",
+    "static/css/2.266e55a5.chunk.css.map": "/Uflixit/static/css/2.266e55a5.chunk.css.map",
+    "static/css/main.0fd89b1c.chunk.css.map": "/Uflixit/static/css/main.0fd89b1c.chunk.css.map"
+  }
+}
