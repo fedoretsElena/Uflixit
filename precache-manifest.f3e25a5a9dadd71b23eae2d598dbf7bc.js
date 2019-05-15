@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4e1702547156226815dbfb7102a8a24b",
+    "revision": "80c3781f632f27345007657da4ceb490",
     "url": "/Uflixit/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Uflixit/static/css/2.266e55a5.chunk.css"
   },
   {
-    "revision": "1437e506a8988c7960f1",
+    "revision": "f4111693d67bb57b690c",
     "url": "/Uflixit/static/css/main.0fd89b1c.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Uflixit/static/js/2.b1c2f6e9.chunk.js"
   },
   {
-    "revision": "1437e506a8988c7960f1",
-    "url": "/Uflixit/static/js/main.55b3d1b9.chunk.js"
+    "revision": "f4111693d67bb57b690c",
+    "url": "/Uflixit/static/js/main.6be1219f.chunk.js"
   },
   {
     "revision": "77bbd11af162102dcfaf",
