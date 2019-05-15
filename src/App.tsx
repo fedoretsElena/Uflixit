@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
 
 import './App.scss';
 
@@ -15,7 +15,6 @@ import AuthService from './services/authService';
 
 function App() {
     const authService = new AuthService();
-
     return (
         <div>
             <Router>
@@ -25,7 +24,7 @@ function App() {
 
                     <Switch>
                         <Route exact
-                               path='/'
+                               path='/home'
                                component={Home}/>
 
                         <Route exact
@@ -41,6 +40,10 @@ function App() {
 
                         <Route path='/login'
                                component={Login}/>
+
+                        <Route path='/'
+                               render={() => <Redirect to='/home'/> }
+                        />
                     </Switch>
 
                 </div>

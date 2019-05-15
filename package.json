@@ -2,7 +2,7 @@
   "name": "netflix-catalog",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://fedoretselena.github.io/Uflixit/",
+  "homepage": "https://fedoretselena.github.io/Uflixit",
   "eslintConfig": {
     "extends": "react-app"
   },

@@ -8,7 +8,7 @@ const Header = () => (
     <header className="header bg-dark py-1">
         <div className="container d-flex justify-content-between align-items-center">
             <Link className="header__logo"
-                  to='/'
+                  to='/home'
             >
                 <img className="img-fluid"
                      src="https://www.userlogos.org/files/netflix-n-logo-png.png"
