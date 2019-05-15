@@ -11,7 +11,7 @@ import Footer from './components/Footer';
 import Login from './components/Login/Login';
 import MediaDetail from './components/MediaDetail';
 import SearchResults from './components/SearchResults';
-import AuthService from './services/AuthService';
+import AuthService from './services/authService';
 
 function App() {
     const authService = new AuthService();

@@ -4,7 +4,7 @@ import ErrorMsg from '../shared/ErrorMsg';
 import Title from '../shared/Title';
 import Loader from '../shared/Loader';
 import MediaList from '../shared/MediaList';
-import MediaService from '../../services/MediaService';
+import MediaService from '../../services/mediaService';
 import BaseMedia from '../../models/BaseMedia';
 
 interface IState {
