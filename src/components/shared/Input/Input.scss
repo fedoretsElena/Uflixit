@@ -2,17 +2,13 @@
   width: 0;
   transition: 0.3s width;
 
-  &--active {
-    width: 350px;
-  }
-
   &__el {
     border: 0;
     color: white;
     outline: none;
     font-size: .8rem;
     background: transparent;
-    font-family: "Courier New";
+    font-family: 'Courier New';
     transition: .3s border-color;
     border-bottom: 1px solid #928c8d;
 
@@ -23,5 +19,12 @@
     &:focus::placeholder {
       color: transparent;
     }
+  }
+}
+
+.grow {
+
+  &-enter-done {
+    width: 350px;
   }
 }

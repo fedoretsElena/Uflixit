@@ -9,7 +9,6 @@ import MediaFactory, { MediaType } from '../models/MediaFactory';
 export class MediaService {
 
     getPopularShows(): Promise<BaseMedia[]> {
-
         return axios.get(ApiConfig.getPopularTVShowsPath)
             .then((ids: any) => this.convertToObj(ids))
             .then((res: any) => this.getPosters(res.slice(0, 10), MediaType.TVShow));
