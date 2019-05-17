@@ -5,20 +5,42 @@ import Movie from '../models/Movie';
 import TVShow from '../models/TVShow';
 import BaseMedia, { IBaseMedia } from '../models/BaseMedia';
 import MediaFactory, { MediaType } from '../models/MediaFactory';
+import IMediaResponse from '../models/MediaResponse';
 
 export class MediaService {
+    VISIBLE_ITEMS: number = 10;
+    storage: { popularShows: IBaseMedia[] } = {
+        popularShows: []
+    };
 
-    getPopularShows(): Promise<BaseMedia[]> {
-        return axios.get(ApiConfig.getPopularTVShowsPath)
-            .then((ids: any) => this.convertToObj(ids))
-            .then((res: any) => this.getPosters(res.slice(0, 10), MediaType.TVShow));
+    // TODO: don't like this logic with pagination
+    getPopularShows(page: number = 1): Promise<IMediaResponse> {
+        const { popularShows } = this.storage;
+        const getPosters = (ids: IBaseMedia[]) => this.getPosters(this.extractDataFromStorage(popularShows, ids, page),
+                                                                  MediaType.TVShow)
+            .then((media: BaseMedia[]) => {
+
+                return {
+                    media,
+                    pages: {
+                        length: popularShows.length / this.VISIBLE_ITEMS,
+                        curr: page
+                    }
+                };
+            });
+
+        return this.storage.popularShows.length >= this.VISIBLE_ITEMS * page
+            ? getPosters([])
+            : axios.get(ApiConfig.getPopularTVShowsPath)
+                .then((ids: any) => this.convertToArrWithKeyId(ids))
+                .then((ids: IBaseMedia[]) => getPosters(ids));
     }
 
     getWantedMoviesIds(): Promise<BaseMedia[]> {
 
         return axios.get(ApiConfig.getWantedMoviesPath)
-            .then((ids: any) => this.convertToObj(ids))
-            .then((res: any) => this.getPosters(res, MediaType.Movie));
+            .then((ids: any) => this.convertToArrWithKeyId(ids))
+            .then((res: IBaseMedia[]) => this.getPosters(res, MediaType.Movie));
     }
 
     getDetail(id: string, location: { pathname: string }): Promise<Movie | TVShow> {
@@ -32,7 +54,7 @@ export class MediaService {
 
     search(config: AxiosRequestConfig): Promise<any> {
         const requests = [axios.get(this.prepareApiPath(ApiConfig.getMediaSearchPath, '', MediaType.Movie + 's'), config),
-                          axios.get(this.prepareApiPath(ApiConfig.getMediaSearchPath, '', MediaType.TVShow + 's'), config)];
+            axios.get(this.prepareApiPath(ApiConfig.getMediaSearchPath, '', MediaType.TVShow + 's'), config)];
 
         return axios.all(requests)
             .then(axios.spread((movies: IBaseMedia, tvShows: any) => {
@@ -43,7 +65,8 @@ export class MediaService {
             }));
     }
 
-    private getPosters(media: IBaseMedia[], type: MediaType): Promise<BaseMedia[]> {
+    private getPosters(media: IBaseMedia[],
+                       type: MediaType): Promise<BaseMedia[]> {
 
         return axios.all(media.map(item => this.getPoster(item, type)))
             .then((res: string[]) => {
@@ -66,7 +89,7 @@ export class MediaService {
             .replace('{type}', type);
     }
 
-    private convertToObj(ids: string[]): IBaseMedia[] {
+    private convertToArrWithKeyId(ids: string[]): IBaseMedia[] {
         return ids.map((id: string) => {
             return {id};
         });
@@ -76,6 +99,17 @@ export class MediaService {
         let result: IBaseMedia[] = Array.isArray(media) ? media : [media];
 
         return result.map((item: IBaseMedia) => new BaseMedia(item, MediaType.Another));
+    }
+
+    private extractDataFromStorage(mediaFromStorage: IBaseMedia[],
+                                   requestedMedia: IBaseMedia[],
+                                   page: number = 1): IBaseMedia[] {
+
+        if (requestedMedia) {
+            mediaFromStorage.push(...requestedMedia);
+        }
+
+        return mediaFromStorage.slice((page - 1) * this.VISIBLE_ITEMS, this.VISIBLE_ITEMS * page);
     }
 }
 
