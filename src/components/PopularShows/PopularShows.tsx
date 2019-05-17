@@ -5,13 +5,15 @@ import Loader from '../shared/Loader';
 import ErrorMsg from '../shared/ErrorMsg';
 import MediaList from '../shared/MediaList';
 import MediaService from '../../services/mediaService';
+import IMediaResponse from '../../models/MediaResponse';
 import BaseMedia from '../../models/BaseMedia';
 
 interface IProps {
 }
 
 interface IState {
-    shows: BaseMedia[],
+    media: BaseMedia[],
+    nav: { curr: number, length: number },
     loaded: boolean,
     loading: boolean,
     error: null | string
@@ -24,7 +26,11 @@ class PopularShows extends Component<IProps, IState> {
         super(props);
 
         this.state = {
-            shows: [],
+            media: [],
+            nav: {
+                curr: 1,
+                length: 0
+            },
             error: null,
             loaded: false,
             loading: false
@@ -34,13 +40,18 @@ class PopularShows extends Component<IProps, IState> {
     }
 
     render() {
-        const {shows, error} = this.state;
+        const {media, nav, nav: {length}, error} = this.state;
+
         return (
             <>
                 <Title title='Popular shows'
-                       length={shows.length}/>
+                       length={length * 10}/>
                 {this.state.loading && <Loader/>}
-                {this.state.loaded && <MediaList items={shows} />}
+
+                {this.state.loaded && <MediaList items={media}
+                                                 pages={nav}
+                                                 uploadMediaForStep={this.getPopularShows}
+                />}
                 {this.state.error && <ErrorMsg msg={error}/>}
             </>
         );
@@ -50,16 +61,18 @@ class PopularShows extends Component<IProps, IState> {
         this.getPopularShows();
     }
 
-    private getPopularShows(): void {
+    getPopularShows = (step?: number): void => {
         this.setState({
-            loading: true
+            loading: true,
+            media: []
         });
 
-        this.mediaService.getPopularShows()
-            .then((shows: BaseMedia[]) => {
+        this.mediaService.getPopularShows(step)
+            .then((data: IMediaResponse) => {
 
                 this.setState({
-                    shows,
+                    media: data.media,
+                    nav: data.pages,
                     error: null,
                     loaded: true,
                     loading: false
