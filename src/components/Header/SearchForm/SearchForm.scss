@@ -6,12 +6,15 @@
     font-size: 1.6em;
     transition: .3s fill, .3s opacity;
 
-    &--hidden {
-      opacity: 0;
-    }
-
     &:hover {
       fill: #fff;
     }
+  }
+}
+
+.fade {
+
+  &-exit-done {
+    opacity: 0;
   }
 }

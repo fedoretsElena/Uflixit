@@ -3,7 +3,7 @@ import axios, { AxiosResponse } from 'axios';
 axios.defaults.headers.common = {
     'X-RapidAPI-Key': process.env.REACT_APP_KEY,
     'X-RapidAPI-Host': process.env.REACT_APP_HOST,
-    'Access-Control-Allow-Origin': 'https://dry-spire-39064.herokuapp.com/'
+    'Access-Control-Allow-Origin': '*'
 };
 
 axios.interceptors.response.use(function (config: AxiosResponse) {

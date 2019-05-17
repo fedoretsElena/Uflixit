@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { CSSTransition } from 'react-transition-group';
 
 import Loader from '../shared/Loader';
 import ErrorMsg from '../shared/ErrorMsg';
@@ -6,6 +7,8 @@ import ErrorMsg from '../shared/ErrorMsg';
 import Movie from '../../models/Movie';
 import TVShow from '../../models/TVShow';
 import MediaService from '../../services/mediaService';
+
+import './MediaDetail.scss';
 
 interface IState {
     media: TVShow | Movie | any,
@@ -31,11 +34,18 @@ class MediaDetail extends Component<any> {
             <>
                 {this.state.loading && !this.state.error && <Loader/>}
                 {this.state.loaded &&
-                <div className="row">
-                    <div className="col col-4">
-                        <img className="img-thumbnail mb-3"
-                             src={image}
-                             alt="media-poster"/>
+                <div className="row mt-5 mb-5">
+                    <div className="col col-4 col--perspective">
+
+                        <CSSTransition in={!!image}
+                                       timeout={300}
+                                       appear={true}
+                                       classNames='fadeRotate'
+                        >
+                            <img className="d-block img-thumbnail mb-4"
+                                 src={image}
+                                 alt="media-poster"/>
+                        </CSSTransition>
 
                         {genres.map((genre: string, i: number) =>
                             <span key={i}

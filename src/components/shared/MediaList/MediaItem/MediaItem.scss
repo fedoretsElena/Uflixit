@@ -1,6 +1,7 @@
 .card {
   max-width: 25%;
   min-width: 200px;
+  overflow: hidden;
 
   &__img {
     transition: .6s transform ease-out;
