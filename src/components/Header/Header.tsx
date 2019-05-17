@@ -15,7 +15,6 @@ const Header = () => (
                      alt="logo"
                 />
             </Link>
-
             <SearchForm/>
         </div>
     </header>

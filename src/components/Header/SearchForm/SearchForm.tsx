@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { IoIosSearch } from 'react-icons/io';
+import { CSSTransition } from 'react-transition-group';
 
 import './SearchForm.scss';
 import Input from '../../shared/Input';
@@ -17,19 +18,25 @@ class SearchForm extends Component {
 
         return (
             <form className="search-form d-flex align-items-center"
-                  onSubmit={ this.navigateToSearchPage }
+                  onSubmit={this.navigateToSearchPage}
             >
-                <IoIosSearch className={ !active ? 'search-form__icon' : 'search-form__icon search-form__icon--hidden' }
-                             onClick={ this.openSearchField }/>
+                <CSSTransition timeout={300}
+                               in={!active}
+                               classNames='fade'
+                >
+                    <IoIosSearch
+                        className='search-form__icon'
+                        onClick={this.openSearchField} />
+                </CSSTransition>
 
                 <Input placeholder='Search... '
-                       value={ this.state.search }
-                       active={ this.state.active }
-                       lostFocus={ this.closeSearchField }
-                       searchChanged={ this.handleSearchChange }
+                       value={this.state.search}
+                       active={this.state.active}
+                       lostFocus={this.closeSearchField}
+                       searchChanged={this.handleSearchChange}
                 />
 
-                {redirectToReferrer && <Redirect to={{ pathname: '../search', search: `?query=${search}` }} />}
+                {redirectToReferrer && <Redirect to={{pathname: '../search', search: `?query=${search}`}}/>}
 
             </form>
         );

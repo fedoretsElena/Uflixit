@@ -1,0 +1,16 @@
+.scaleFade {
+
+  &-appear {
+    max-height: 0;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: .5s opacity, .6s transform, .9s max-height;
+
+    &-active {
+      opacity: 1;
+      max-height: 600px;
+      transform: scale(1);
+      transition: .3s opacity, .5s transform, 1s max-height;
+    }
+  }
+}
