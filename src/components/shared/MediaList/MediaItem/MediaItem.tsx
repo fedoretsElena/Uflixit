@@ -19,7 +19,7 @@ class MediaItem extends Component<IProps> {
             >
                 <div className="card__img-wrapper overflow-hidden">
                     <img src={image}
-                         className="card__img card-img-top"
+                         className="card__img card-img-top "
                          alt="poster"
                     />
                 </div>

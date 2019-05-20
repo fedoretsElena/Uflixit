@@ -20,7 +20,7 @@ class MediaList extends Component<IProps> {
         const {items, pages, uploadMediaForStep} = this.props;
 
         return (
-            <div className='card-wrapper d-flex flex-column justify-content-end'>
+            <div className='card-wrapper'>
 
                 <TransitionGroup className="card-group">
                     {items.map((item) =>

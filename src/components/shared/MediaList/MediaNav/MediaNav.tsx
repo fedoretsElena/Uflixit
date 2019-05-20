@@ -7,18 +7,20 @@ interface IProps {
     uploadPage: Function
 }
 
-function generateArr(length: number): number[] {
+function generateArr(length: number, curr: number): number[] {
     const arr: number[] = [];
 
-    for (let i = 1; i <= length; i++) {
-        arr.push(i);
+    for (let i = curr - 1; i <= curr + 1; i++) {
+        if (i !== 0) {
+            arr.push(i);
+        }
     }
 
     return arr;
 }
 
 const MediaNav = ({length, curr, uploadPage}: IProps) => (
-    <div className="btn-group btn-group-sm mr-2 pr-1">
+    <div className="btn-group btn-group-sm mr-2 pr-1 ml-auto">
         {curr - 1 >=1 && <button type="button"
                 key='back'
                 className='btn btn-secondary mr-1'
@@ -28,7 +30,7 @@ const MediaNav = ({length, curr, uploadPage}: IProps) => (
         </button>
         }
 
-        {generateArr(length).map((step: number) => (
+        {generateArr(length, curr).map((step: number) => (
             <button type="button"
                     key={step}
                     className={`btn ${ step === curr ? 'btn-primary' : 'btn-secondary' }`}
