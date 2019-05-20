@@ -1,75 +1,75 @@
 {
-  "name": "netflix-catalog",
-  "version": "0.1.0",
-  "private": true,
-  "homepage": "https://fedoretselena.github.io/Uflixit",
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "engines": {
-    "node": "10.15.3"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "dependencies": {
-    "axios": "^0.18.0",
-    "bootstrap": "^4.3.1",
-    "react": "^16.8.6",
-    "react-dev-utils": "^9.0.1",
-    "react-dom": "^16.8.6",
-    "react-google-login": "^5.0.4",
-    "react-icons": "^3.7.0",
-    "react-router-dom": "^5.0.0",
-    "react-scripts": "3.0.0",
-    "react-transition-group": "^4.0.1"
-  },
-  "devDependencies": {
-    "@types/jest": "^24.0.12",
-    "@types/node": "^12.0.0",
-    "@types/react": "^16.8.17",
-    "@types/react-dom": "^16.8.4",
-    "@types/react-router-dom": "^4.3.3",
-    "@types/react-transition-group": "^2.9.1",
-    "gh-pages": "^2.0.1",
-    "husky": "^2.3.0",
-    "lint-staged": "^8.1.7",
-    "node-sass": "^4.12.0",
-    "prettier": "^1.17.1",
-    "tslint": "^5.16.0",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-plugin-prettier": "^2.0.1",
-    "tslint-react": "^4.0.0",
-    "typescript": "^3.4.5"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build",
-    "rebuild": "react-scripts build && serve -s build",
-    "tslint": "tslint './src/**/*.{ts,tsx}'",
-    "tslint:fix": "npm run tslint -- --fix",
-    "tslint:check": "tslint-config-prettier-check ./tslint.json",
-    "prettier": "prettier --write --config ./.prettierrc './src/**/*.{ts,tsx}'"
-  },
-  "lint-staged": {
-    "*.ts": "yarn tslint",
-    "*.tsx": "yarn tslint"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
+    "name": "netflix-catalog",
+    "version": "0.1.0",
+    "private": true,
+    "homepage": "https://fedoretselena.github.io/Uflixit",
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "engines": {
+        "node": "10.15.3"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "dependencies": {
+        "axios": "^0.18.0",
+        "bootstrap": "^4.3.1",
+        "react": "^16.8.6",
+        "react-dev-utils": "^9.0.1",
+        "react-dom": "^16.8.6",
+        "react-google-login": "^5.0.4",
+        "react-icons": "^3.7.0",
+        "react-router-dom": "^5.0.0",
+        "react-scripts": "3.0.0",
+        "react-transition-group": "^4.0.1"
+    },
+    "devDependencies": {
+        "@types/jest": "^24.0.12",
+        "@types/node": "^12.0.0",
+        "@types/react": "^16.8.17",
+        "@types/react-dom": "^16.8.4",
+        "@types/react-router-dom": "^4.3.3",
+        "@types/react-transition-group": "^2.9.1",
+        "gh-pages": "^2.0.1",
+        "husky": "^2.3.0",
+        "lint-staged": "^8.1.7",
+        "node-sass": "^4.12.0",
+        "prettier": "^1.17.1",
+        "pretty-quick": "^1.11.0",
+        "tslint": "^5.16.0",
+        "tslint-config-prettier": "^1.18.0",
+        "tslint-plugin-prettier": "^2.0.1",
+        "tslint-react": "^4.0.0",
+        "typescript": "^3.4.5"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "deploy": "gh-pages -d build",
+        "rebuild": "react-scripts build && serve -s build",
+        "tslint": "tslint './src/**/*.{ts,tsx}'",
+        "tslint:fix": "npm run tslint -- --fix",
+        "tslint:check": "tslint-config-prettier-check ./tslint.json"
+    },
+    "lint-staged": {
+        "*.ts": "yarn tslint",
+        "*.tsx": "yarn tslint"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged && yarn run pretty-quick"
+        }
     }
-  }
 }

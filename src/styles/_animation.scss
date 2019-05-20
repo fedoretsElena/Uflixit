@@ -1,22 +1,20 @@
 .fadeRotate {
+    &-appear {
+        opacity: 0;
+        transform: rotateY(90deg);
+        filter: grayscale(100%);
 
-  &-appear {
-    opacity: 0;
-    transform: rotateY(90deg);
-    filter: grayscale(100%);
-
-    &-done {
-      opacity: 1;
-      transform: rotateY(0);
-      filter: grayscale(0);
-      transition: .3s transform, .2s opacity, .5s .4s filter;
+        &-done {
+            opacity: 1;
+            transform: rotateY(0);
+            filter: grayscale(0);
+            transition: 0.3s transform, 0.2s opacity, 0.5s 0.4s filter;
+        }
     }
-  }
 }
 
 .fade {
-
-  &-exit-done {
-    opacity: 0;
-  }
+    &-exit-done {
+        opacity: 0;
+    }
 }
