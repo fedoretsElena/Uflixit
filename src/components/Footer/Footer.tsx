@@ -11,7 +11,7 @@ export const Footer = () => {
 
                 <ul className="mb-0">
                     <li>Authorization</li>
-                    <li>Search</li>
+                    <li><s>Search</s></li>
                     <li>Episodes</li>
                     <li>Add slider?</li>
                     <li>Lazy images?</li>
