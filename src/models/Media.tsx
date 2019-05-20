@@ -15,6 +15,7 @@ class Media extends BaseMedia{
     trailer: string;
     summary: string;
     year: number;
+    fanart: string;
 
     constructor(data: any, type: MediaType) {
         super(data, type);
@@ -29,6 +30,7 @@ class Media extends BaseMedia{
         this.trailer = data.trailer;
         this.summary = data.summary;
         this.year = data.year;
+        this.fanart = data.fanart;
     }
 }
 
