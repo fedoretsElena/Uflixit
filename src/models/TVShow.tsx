@@ -1,8 +1,5 @@
-import Media from './Media';
-import { MediaType } from './MediaFactory';
-
-interface ITVShow {
-}
+import Media from "./Media";
+import { MediaType } from "./MediaFactory";
 
 class TVShow extends Media {
     creators: string[];
@@ -14,8 +11,8 @@ class TVShow extends Media {
         super(data, MediaType.TVShow);
 
         this.creators = data.creators;
-        this.yearStarted = data.year_started || 'unknown';
-        this.yearEnded = data.year_ended || 'not yet';
+        this.yearStarted = data.year_started || "unknown";
+        this.yearEnded = data.year_ended || "not yet";
         this.status = data.status;
     }
 }

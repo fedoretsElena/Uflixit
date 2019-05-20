@@ -1,28 +1,25 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import Title from '../shared/Title';
-import Loader from '../shared/Loader';
-import ErrorMsg from '../shared/ErrorMsg';
-import MediaList from '../shared/MediaList';
-import MediaService from '../../services/mediaService';
-import IMediaResponse from '../../models/MediaResponse';
-import BaseMedia from '../../models/BaseMedia';
-
-interface IProps {
-}
+import BaseMedia from "../../models/BaseMedia";
+import IMediaResponse from "../../models/MediaResponse";
+import MediaService from "../../services/mediaService";
+import Title from "../shared/Title";
+import Loader from "../shared/Loader";
+import ErrorMsg from "../shared/ErrorMsg";
+import MediaList from "../shared/MediaList";
 
 interface IState {
-    media: BaseMedia[],
-    nav: { curr: number, length: number },
-    loaded: boolean,
-    loading: boolean,
-    error: null | string
+    media: BaseMedia[];
+    nav: { curr: number; length: number };
+    loaded: boolean;
+    loading: boolean;
+    error: null | string;
 }
 
-class PopularShows extends Component<IProps, IState> {
+class PopularShows extends Component<{}, IState> {
     mediaService: MediaService;
 
-    constructor(props: IProps) {
+    constructor(props: {}) {
         super(props);
 
         this.state = {
@@ -40,19 +37,26 @@ class PopularShows extends Component<IProps, IState> {
     }
 
     render() {
-        const {media, nav, nav: {length}, error} = this.state;
+        const {
+            media,
+            nav,
+            nav: { length },
+            error
+        } = this.state;
 
         return (
             <>
-                <Title title='Popular shows'
-                       length={length * 10}/>
-                {this.state.loading && <Loader/>}
+                <Title title="Popular shows" length={length * 10} />
+                {this.state.loading && <Loader />}
 
-                {this.state.loaded && <MediaList items={media}
-                                                 pages={nav}
-                                                 uploadMediaForStep={this.getPopularShows}
-                />}
-                {this.state.error && <ErrorMsg msg={error}/>}
+                {this.state.loaded && (
+                    <MediaList
+                        items={media}
+                        pages={nav}
+                        uploadMediaForStep={this.getPopularShows}
+                    />
+                )}
+                {this.state.error && <ErrorMsg msg={error} />}
             </>
         );
     }
@@ -67,9 +71,9 @@ class PopularShows extends Component<IProps, IState> {
             media: []
         });
 
-        this.mediaService.getPopularShows(step)
+        this.mediaService
+            .getPopularShows(step)
             .then((data: IMediaResponse) => {
-
                 this.setState({
                     media: data.media,
                     nav: data.pages,
@@ -78,12 +82,13 @@ class PopularShows extends Component<IProps, IState> {
                     loading: false
                 });
             })
-            .catch(() => this.setState({
+            .catch(() =>
+                this.setState({
                     loading: false,
-                    error: 'Can not get posters of TV shows using ids.'
+                    error: "Can not get posters of TV shows using ids."
                 })
             );
-    }
+    };
 }
 
 export default PopularShows;

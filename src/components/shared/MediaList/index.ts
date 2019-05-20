@@ -1,3 +1,3 @@
-import MediaList from './MediaList';
+import MediaList from "./MediaList";
 
 export default MediaList;

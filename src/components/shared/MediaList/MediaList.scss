@@ -1,35 +1,35 @@
 .scaleFade {
+    &-appear {
+        opacity: 0;
+        max-height: 0;
+        transform: scale(0.5);
 
-  &-appear {
-    opacity: 0;
-    max-height: 0;
-    transform: scale(0.5);
-
-    &-active {
-      opacity: 1;
-      max-height: 600px;
-      transform: scale(1);
-      transition: .3s opacity, .5s transform, 1s max-height;
+        &-active {
+            opacity: 1;
+            max-height: 600px;
+            transform: scale(1);
+            transition: 0.3s opacity, 0.5s transform, 1s max-height;
+        }
     }
-  }
 
-  &-enter {
-    opacity: 0;
-    filter: grayscale(75%);
-    transition: .3s opacity;
+    &-enter {
+        opacity: 0;
+        filter: grayscale(75%);
+        transition: 0.3s opacity;
 
-    &-active {
-      opacity: 1;
-      filter: grayscale(0);
-      transition: .3s opacity, .4s .2s filter;
+        &-active {
+            opacity: 1;
+            filter: grayscale(0);
+            transition: 0.3s opacity, 0.4s 0.2s filter;
+        }
     }
-  }
 
-  &-exit, &-exit-active {
-    display: none;
-  }
+    &-exit,
+    &-exit-active {
+        display: none;
+    }
 }
 
 .card-wrapper {
-  min-height: 500px;
+    min-height: 500px;
 }

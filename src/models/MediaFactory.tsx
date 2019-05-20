@@ -1,21 +1,22 @@
-import Movie from './Movie';
-import TVShow from './TVShow';
+import Movie from "./Movie";
+import TVShow from "./TVShow";
 
 export enum MediaType {
-    Movie = 'movie',
-    TVShow = 'tv-show',
-    Another = 'another'
+    Movie = "movie",
+    TVShow = "tv-show",
+    Another = "another"
 }
 
 class MediaFactory {
-    private readonly _media: Movie | TVShow;
+    private readonly media: Movie | TVShow;
 
     constructor(type: MediaType, data: any) {
-        this._media = type === MediaType.Movie ? new Movie(data) : new TVShow(data);
+        this.media =
+            type === MediaType.Movie ? new Movie(data) : new TVShow(data);
     }
 
     getMedia(): Movie | TVShow {
-        return this._media;
+        return this.media;
     }
 }
 

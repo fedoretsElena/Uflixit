@@ -1,10 +1,7 @@
-import Media from './Media';
-import { MediaType } from './MediaFactory';
+import Media from "./Media";
+import { MediaType } from "./MediaFactory";
 
-interface IMovie {
-}
-
-class Movie  extends Media {
+class Movie extends Media {
     director: string;
 
     constructor(data: any) {

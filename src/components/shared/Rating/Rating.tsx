@@ -1,23 +1,21 @@
-import React from 'react';
+import React from "react";
 
 interface IProps {
-    value: number
+    value: number;
 }
 
 function getBgValue(value: number): string {
     if (value > 8) {
-        return 'success';
+        return "success";
     } else if (value > 6) {
-        return 'warning';
+        return "warning";
     } else {
-        return 'secondary';
+        return "secondary";
     }
 }
 
-const Rating = ({value}: IProps) => (
-    <span className={'badge badge-' + getBgValue(value)}>
-        {value}
-    </span>
+const Rating = ({ value }: IProps) => (
+    <span className={"badge badge-" + getBgValue(value)}>{value}</span>
 );
 
 export default Rating;

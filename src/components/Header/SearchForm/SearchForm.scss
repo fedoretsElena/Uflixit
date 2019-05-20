@@ -1,13 +1,12 @@
 .search-form {
+    &__icon {
+        fill: #928c8d;
+        cursor: pointer;
+        font-size: 1.6em;
+        transition: 0.3s fill, 0.3s opacity;
 
-  &__icon {
-    fill: #928c8d;
-    cursor: pointer;
-    font-size: 1.6em;
-    transition: .3s fill, .3s opacity;
-
-    &:hover {
-      fill: #fff;
+        &:hover {
+            fill: #fff;
+        }
     }
-  }
 }

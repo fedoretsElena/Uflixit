@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
-import { UnregisterCallback } from 'history';
-import axios, { AxiosRequestConfig } from 'axios';
+import axios, { AxiosRequestConfig } from "axios";
+import { UnregisterCallback } from "history";
+import React, { Component } from "react";
 
-import Title from '../shared/Title';
-import Loader from '../shared/Loader';
-import ErrorMsg from '../shared/ErrorMsg';
-import MediaList from '../shared/MediaList';
-import BaseMedia from '../../models/BaseMedia';
-import MediaService from '../../services/mediaService';
+import BaseMedia from "../../models/BaseMedia";
+import MediaService from "../../services/mediaService";
+import Title from "../shared/Title";
+import Loader from "../shared/Loader";
+import ErrorMsg from "../shared/ErrorMsg";
+import MediaList from "../shared/MediaList";
 
 interface IProps {
-    location: any,
-    history: any
+    location: any;
+    history: any;
 }
 
 interface IStore {
@@ -22,10 +22,6 @@ interface IStore {
 }
 
 class SearchResults extends Component<IProps, IStore> {
-    stopListenRoute: UnregisterCallback = () => {
-    };
-    cancelSearchRequest: Function = () => {
-    };
     mediaService: MediaService = new MediaService();
     state: IStore = {
         loading: false,
@@ -33,20 +29,20 @@ class SearchResults extends Component<IProps, IStore> {
         error: null,
         media: []
     };
+    stopListenRoute!: UnregisterCallback;
+    cancelSearchRequest!: () => void;
 
     render() {
-        const {media, loaded, loading, error} = this.state;
+        const { media, loaded, loading, error } = this.state;
 
         return (
             <>
-                <Title title='Search results'
-                       length={media.length}
-                />
-                {loading && !error && <Loader/>}
+                <Title title="Search results" length={media.length} />
+                {loading && !error && <Loader />}
                 {loaded && <MediaList items={media} />}
-                {error && <ErrorMsg msg={error}/>}
+                {error && <ErrorMsg msg={error} />}
             </>
-        )
+        );
     }
 
     componentDidMount(): void {
@@ -71,32 +67,34 @@ class SearchResults extends Component<IProps, IStore> {
 
         const config: AxiosRequestConfig = {
             params,
-            cancelToken: new axios.CancelToken((c) => {
+            cancelToken: new axios.CancelToken(c => {
                 // An executor function receives a cancel function as a parameter
                 this.cancelSearchRequest = c;
             })
         };
 
-        this.mediaService.search(config)
+        this.mediaService
+            .search(config)
             .then((res: BaseMedia[]) => {
-
-                    this.setState({
-                        media: res,
-                        loaded: true,
-                        loading: false,
-                        error: null
-                    })
-                }
-            )
-            .catch(() => this.setState({
-                    error: 'There is no game according to the request.',
+                this.setState({
+                    media: res,
+                    loaded: true,
+                    loading: false,
+                    error: null
+                });
+            })
+            .catch(() =>
+                this.setState({
+                    error: "There is no game according to the request.",
                     loading: false
                 })
             );
     }
 
     private startListenRouteChanges(): void {
-        this.stopListenRoute = this.props.history.listen((location: any) => this.search(location));
+        this.stopListenRoute = this.props.history.listen((location: any) =>
+            this.search(location)
+        );
     }
 }
 

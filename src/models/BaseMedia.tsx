@@ -1,4 +1,4 @@
-import { MediaType } from './MediaFactory';
+import { MediaType } from "./MediaFactory";
 
 export interface IBaseMedia {
     id: string;
@@ -16,8 +16,10 @@ class BaseMedia {
 
     constructor(data: IBaseMedia, type: MediaType) {
         this.id = data.imdb_id || data.id;
-        this.image = data.image || 'https://cdns.directv.com/cms2/my_directv/general/lg__celebrity_generic.jpg';
-        this.title = data.title || '';
+        this.image =
+            data.image ||
+            "https://cdns.directv.com/cms2/my_directv/general/lg__celebrity_generic.jpg";
+        this.title = data.title || "";
         this.type = type;
     }
 }

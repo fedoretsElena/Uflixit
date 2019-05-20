@@ -1,3 +1,3 @@
-import MediaNav from './MediaNav';
+import MediaNav from "./MediaNav";
 
 export default MediaNav;

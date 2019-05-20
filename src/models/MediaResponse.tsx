@@ -1,9 +1,9 @@
-import BaseMedia  from './BaseMedia';
+import BaseMedia from "./BaseMedia";
 
 export default interface IMediaResponse {
-    media: BaseMedia[],
+    media: BaseMedia[];
     pages: {
-        length: number,
-        curr: number
-    }
+        length: number;
+        curr: number;
+    };
 }
