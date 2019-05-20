@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface IProps {
     msg: string | null;
@@ -6,7 +6,7 @@ interface IProps {
 
 const ErrorMsg = (props: IProps) => (
     <div className="alert alert-warning" role="alert">
-        { props.msg }
+        {props.msg}
     </div>
 );
 

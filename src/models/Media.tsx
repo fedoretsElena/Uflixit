@@ -1,10 +1,7 @@
-import BaseMedia from './BaseMedia';
-import { MediaType } from './MediaFactory';
+import BaseMedia from "./BaseMedia";
+import { MediaType } from "./MediaFactory";
 
-interface IMedia {
-}
-
-class Media extends BaseMedia{
+class Media extends BaseMedia {
     rating: number;
     duration: number;
     published: string;

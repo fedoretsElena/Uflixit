@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import ErrorMsg from '../shared/ErrorMsg';
-import Title from '../shared/Title';
-import Loader from '../shared/Loader';
-import MediaList from '../shared/MediaList';
-import MediaService from '../../services/mediaService';
-import BaseMedia from '../../models/BaseMedia';
+import BaseMedia from "../../models/BaseMedia";
+import MediaService from "../../services/mediaService";
+import ErrorMsg from "../shared/ErrorMsg";
+import Loader from "../shared/Loader";
+import MediaList from "../shared/MediaList";
+import Title from "../shared/Title";
 
 interface IState {
-    movies: BaseMedia[],
-    loaded: boolean,
-    loading: boolean
-    error: string | null,
+    movies: BaseMedia[];
+    loaded: boolean;
+    loading: boolean;
+    error: string | null;
 }
 
 class WantedMovies extends Component {
@@ -24,21 +24,19 @@ class WantedMovies extends Component {
     mediaService: MediaService = new MediaService();
 
     render() {
-        const {loaded, loading, error, movies} = this.state;
+        const { loaded, loading, error, movies } = this.state;
 
         return (
             <>
-                <Title title='Wanted movies'
-                       length={movies.length}/>
-                {loading && (<Loader/>)}
-                {loaded && movies && (<MediaList items={movies} />)}
-                {error && !loading && (<ErrorMsg msg={error}/>)}
+                <Title title="Wanted movies" length={movies.length} />
+                {loading && <Loader />}
+                {loaded && movies && <MediaList items={movies} />}
+                {error && !loading && <ErrorMsg msg={error} />}
             </>
         );
     }
 
     componentDidMount(): void {
-
         this.getWantedMovies();
     }
 
@@ -47,7 +45,8 @@ class WantedMovies extends Component {
             loading: true
         });
 
-        this.mediaService.getWantedMoviesIds()
+        this.mediaService
+            .getWantedMoviesIds()
             .then((movies: BaseMedia[]) => {
                 this.setState({
                     movies,
@@ -56,9 +55,10 @@ class WantedMovies extends Component {
                     loading: false
                 });
             })
-            .catch(() => this.setState({
+            .catch(() =>
+                this.setState({
                     loading: false,
-                    error: 'Can not get posters of movies using ids.'
+                    error: "Can not get posters of movies using ids."
                 })
             );
     }

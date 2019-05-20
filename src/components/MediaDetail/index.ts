@@ -1,3 +1,3 @@
-import MediaDetail from './MediaDetail';
+import MediaDetail from "./MediaDetail";
 
 export default MediaDetail;

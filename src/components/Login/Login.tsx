@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
-import GoogleLogin from 'react-google-login';
+import React, { Component } from "react";
+import GoogleLogin from "react-google-login";
 
 class Login extends Component {
-
     render() {
         return (
             <GoogleLogin
@@ -10,14 +9,14 @@ class Login extends Component {
                 buttonText="Login"
                 onSuccess={this.responseGoogle}
                 onFailure={this.responseGoogle}
-                cookiePolicy={'single_host_origin'}
+                cookiePolicy={"single_host_origin"}
             />
         );
     }
 
     responseGoogle = (res: any) => {
-        console.log('Answer', res);
-    }
+        // console.log("Answer", res);
+    };
 }
 
 export default Login;
