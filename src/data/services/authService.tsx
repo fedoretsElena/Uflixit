@@ -1,7 +1,7 @@
-import IUser from "../models/User";
+import IUser from "../../models/User";
 
 class AuthService {
-    user: IUser = {};
+    user: IUser | null = null;
 
     isLogin(): boolean {
         return !!this.user;

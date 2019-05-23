@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorMsg component should render correctly 1`] = `
+<div
+  className="alert alert-warning"
+  role="alert"
+>
+  Waning msg
+</div>
+`;

@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MediaNax component should render correctly 1`] = `
+<div
+  className="btn-group btn-group-sm mr-2 pr-1 ml-auto"
+>
+  <button
+    className="btn btn-primary"
+    key="1"
+    onClick={[Function]}
+    type="button"
+  >
+    1
+  </button>
+  <button
+    className="btn btn-secondary"
+    key="2"
+    onClick={[Function]}
+    type="button"
+  >
+    2
+  </button>
+  <button
+    className="btn btn-secondary ml-1"
+    key="forward"
+    onClick={[Function]}
+    type="button"
+  >
+    <FaStepForward />
+  </button>
+</div>
+`;

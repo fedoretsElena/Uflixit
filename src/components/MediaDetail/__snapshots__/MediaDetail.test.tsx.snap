@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MediaDetail component should render correctly 1`] = `
+<Fragment>
+  <Loader />
+</Fragment>
+`;
+
+exports[`MediaDetail component should render correctly and take data 1`] = `
+<Fragment>
+  <Loader />
+</Fragment>
+`;

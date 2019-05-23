@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import BaseMedia from "../../models/BaseMedia";
-import MediaService from "../../services/mediaService";
+import MediaService from "../../data/services/mediaService";
 import ErrorMsg from "../shared/ErrorMsg";
 import Loader from "../shared/Loader";
 import MediaList from "../shared/MediaList";
@@ -21,7 +21,7 @@ class WantedMovies extends Component {
         loaded: false,
         loading: false
     };
-    mediaService: MediaService = new MediaService();
+    mediaService: any = new MediaService();
 
     render() {
         const { loaded, loading, error, movies } = this.state;

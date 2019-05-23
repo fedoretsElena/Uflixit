@@ -1,6 +1,6 @@
 import React from "react";
 import {
-    BrowserRouter as Router,
+    BrowserRouter,
     Redirect,
     Route,
     Switch
@@ -20,7 +20,7 @@ import SearchResults from "./components/SearchResults";
 function App() {
     return (
         <div>
-            <Router>
+            <BrowserRouter>
                 <Header />
 
                 <div className="container py-4">
@@ -51,7 +51,7 @@ function App() {
                 </div>
 
                 <Footer />
-            </Router>
+            </BrowserRouter>
         </div>
     );
 }

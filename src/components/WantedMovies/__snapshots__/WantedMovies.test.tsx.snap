@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WantedMovies component render correctly WantedMovies component 1`] = `
+<Fragment>
+  <Title
+    length={0}
+    title="Wanted movies"
+  />
+  <Loader />
+</Fragment>
+`;

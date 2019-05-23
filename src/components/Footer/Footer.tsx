@@ -13,9 +13,7 @@ export const Footer = () => {
                     <li>
                         <s>Search</s>
                     </li>
-                    <li>Episodes</li>
-                    <li>Add slider?</li>
-                    <li>Lazy images?</li>
+                    <li>Lazy loading</li>
                 </ul>
             </div>
         </footer>

@@ -8,7 +8,7 @@ import Rating from "../shared/Rating";
 
 import Movie from "../../models/Movie";
 import TVShow from "../../models/TVShow";
-import MediaService from "../../services/mediaService";
+import MediaService from "../../data/services/mediaService";
 
 import "./MediaDetail.scss";
 
@@ -19,7 +19,7 @@ interface IState {
     error: string | null;
 }
 
-class MediaDetail extends Component<any> {
+class MediaDetail extends Component<any, IState> {
     state: IState = {
         media: {},
         error: null,
@@ -50,7 +50,7 @@ class MediaDetail extends Component<any> {
 
         return (
             <>
-                {this.state.loading && !this.state.error && <Loader />}
+                {this.state.loading && !this.state.error && <Loader/>}
                 {this.state.loaded && (
                     <div className="row mt-5 mb-5">
                         <div
@@ -84,7 +84,7 @@ class MediaDetail extends Component<any> {
                         <section className="col col-8">
                             <div className="d-flex justify-content-between align-items-center">
                                 <h1 className="mb-0 w-75">{title}</h1>
-                                <Rating value={rating} />
+                                <Rating value={rating}/>
                             </div>
                             <div className="mt-1 text-primary">
                                 {" "}
@@ -122,7 +122,7 @@ class MediaDetail extends Component<any> {
 
                                 <div className="col col-6">
                                     {stars && stars.length > 0 && (
-                                        <ListGroup title="Stars" list={stars} />
+                                        <ListGroup title="Stars" list={stars}/>
                                     )}
                                 </div>
                             </div>
@@ -132,7 +132,7 @@ class MediaDetail extends Component<any> {
                     </div>
                 )}
 
-                {this.state.error && <ErrorMsg msg={this.state.error} />}
+                {this.state.error && <ErrorMsg msg={this.state.error}/>}
             </>
         );
     }

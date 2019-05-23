@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MediaDetail component should render correctly and take data 1`] = `
+<Fragment>
+  <Title
+    length={0}
+    title="Search results"
+  />
+  <Loader />
+</Fragment>
+`;
