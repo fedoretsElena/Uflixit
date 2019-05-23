@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rating component should render 1`] = `
+<DocumentFragment>
+  <span
+    class="badge badge-warning"
+    data-testid="badge-container"
+  >
+    7
+  </span>
+</DocumentFragment>
+`;

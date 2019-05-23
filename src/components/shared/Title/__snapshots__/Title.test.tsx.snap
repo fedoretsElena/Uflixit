@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title component successful render component 1`] = `
+<h4
+  className="mt-5 mb-3"
+>
+  <span
+    className="ml-2 badge badge-primary"
+  >
+    0
+  </span>
+</h4>
+`;

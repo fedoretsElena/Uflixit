@@ -1,13 +1,13 @@
 import axios, { AxiosRequestConfig } from "axios";
 
-import ApiConfig from "../core/ApiConfig";
-import BaseMedia, { IBaseMedia } from "../models/BaseMedia";
-import MediaFactory, { MediaType } from "../models/MediaFactory";
-import IMediaResponse from "../models/MediaResponse";
-import Movie from "../models/Movie";
-import TVShow from "../models/TVShow";
+import ApiConfig from "../../core/ApiConfig";
+import BaseMedia, { IBaseMedia } from "../../models/BaseMedia";
+import MediaFactory, { MediaType } from "../../models/MediaFactory";
+import IMediaResponse from "../../models/MediaResponse";
+import Movie from "../../models/Movie";
+import TVShow from "../../models/TVShow";
 
-export class MediaService {
+class MediaService {
     VISIBLE_ITEMS: number = 10;
     storage: { popularShows: IBaseMedia[] } = {
         popularShows: []
@@ -34,14 +34,18 @@ export class MediaService {
             ? getPosters([])
             : axios
                   .get(ApiConfig.getPopularTVShowsPath)
-                  .then((ids: any) => this.convertToArrWithKeyId(ids))
+                  .then((ids: string[] | string | any) =>
+                      this.convertToArrWithKeyId(ids)
+                  )
                   .then((ids: IBaseMedia[]) => getPosters(ids));
     }
 
     getWantedMoviesIds(): Promise<BaseMedia[]> {
         return axios
             .get(ApiConfig.getWantedMoviesPath)
-            .then((ids: any) => this.convertToArrWithKeyId(ids))
+            .then((ids: string[] | string | any) =>
+                this.convertToArrWithKeyId(ids)
+            )
             .then((res: IBaseMedia[]) => this.getPosters(res, MediaType.Movie));
     }
 
@@ -135,7 +139,11 @@ export class MediaService {
         return path.replace("{id}", id).replace("{type}", type);
     }
 
-    private convertToArrWithKeyId(ids: string[]): IBaseMedia[] {
+    private convertToArrWithKeyId(ids: string[] | string): IBaseMedia[] {
+        if (!Array.isArray(ids)) {
+            ids = [ids];
+        }
+
         return ids.map((id: string) => {
             return { id };
         });
@@ -149,6 +157,7 @@ export class MediaService {
         );
     }
 
+    // TODO: bad logic, method isn't pure
     private extractDataFromStorage(
         mediaFromStorage: IBaseMedia[],
         requestedMedia: IBaseMedia[],

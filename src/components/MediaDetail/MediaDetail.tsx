@@ -8,7 +8,7 @@ import Rating from "../shared/Rating";
 
 import Movie from "../../models/Movie";
 import TVShow from "../../models/TVShow";
-import MediaService from "../../services/mediaService";
+import MediaService from "../../data/services/mediaService";
 
 import "./MediaDetail.scss";
 
@@ -19,7 +19,7 @@ interface IState {
     error: string | null;
 }
 
-class MediaDetail extends Component<any> {
+class MediaDetail extends Component<any, IState> {
     state: IState = {
         media: {},
         error: null,

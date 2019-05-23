@@ -3,7 +3,7 @@ import { UnregisterCallback } from "history";
 import React, { Component } from "react";
 
 import BaseMedia from "../../models/BaseMedia";
-import MediaService from "../../services/mediaService";
+import MediaService from "../../data/services/mediaService";
 import Title from "../shared/Title";
 import Loader from "../shared/Loader";
 import ErrorMsg from "../shared/ErrorMsg";
@@ -30,7 +30,7 @@ class SearchResults extends Component<IProps, IStore> {
         media: []
     };
     stopListenRoute!: UnregisterCallback;
-    cancelSearchRequest!: () => void;
+    cancelSearchRequest!: Function;
 
     render() {
         const { media, loaded, loading, error } = this.state;

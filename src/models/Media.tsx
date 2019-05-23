@@ -20,9 +20,9 @@ class Media extends BaseMedia {
         this.rating = data.rating;
         this.duration = data.duration;
         this.published = data.published;
-        this.stars = data.stars.slice(0, 5);
+        this.stars = data.stars && data.stars.slice(0, 5);
         this.countries = data.countries;
-        this.keywords = data.keywords.slice(0, 10);
+        this.keywords = data.keywords && data.keywords.slice(0, 10);
         this.genres = data.genres;
         this.trailer = data.trailer;
         this.summary = data.summary;

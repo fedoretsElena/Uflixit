@@ -4,7 +4,7 @@ interface IProps {
     value: number;
 }
 
-function getBgValue(value: number): string {
+export function getBgValue(value: number): string {
     if (value > 8) {
         return "success";
     } else if (value > 6) {
@@ -15,7 +15,12 @@ function getBgValue(value: number): string {
 }
 
 const Rating = ({ value }: IProps) => (
-    <span className={"badge badge-" + getBgValue(value)}>{value}</span>
+    <span
+        className={"badge badge-" + getBgValue(value)}
+        data-testid="badge-container"
+    >
+        {value}
+    </span>
 );
 
 export default Rating;

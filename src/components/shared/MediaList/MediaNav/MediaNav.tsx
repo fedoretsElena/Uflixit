@@ -27,7 +27,9 @@ const MediaNav = ({ length, curr, uploadPage }: IProps) => (
                 className={`btn ${
                     step === curr ? "btn-primary" : "btn-secondary"
                 }`}
-                onClick={() => checkCurrPage(curr, step, uploadPage(step))}
+                onClick={() =>
+                    checkCurrPage(curr, step, () => uploadPage(step))
+                }
             >
                 {step}
             </button>
@@ -48,7 +50,7 @@ const MediaNav = ({ length, curr, uploadPage }: IProps) => (
 
 export default MediaNav;
 
-function generateArr(length: number, curr: number): number[] {
+export function generateArr(length: number, curr: number): number[] {
     const arr: number[] = [];
 
     for (let i = curr - 1; i <= curr + 1; i++) {
@@ -60,7 +62,7 @@ function generateArr(length: number, curr: number): number[] {
     return arr;
 }
 
-function checkCurrPage(curr: number, next: number, callback: any) {
+export function checkCurrPage(curr: number, next: number, callback: any): void {
     if (curr !== next) {
         callback();
     }

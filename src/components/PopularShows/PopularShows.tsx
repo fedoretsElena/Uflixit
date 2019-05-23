@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import BaseMedia from "../../models/BaseMedia";
 import IMediaResponse from "../../models/MediaResponse";
-import MediaService from "../../services/mediaService";
+import MediaService from "../../data/services/mediaService";
 import Title from "../shared/Title";
 import Loader from "../shared/Loader";
 import ErrorMsg from "../shared/ErrorMsg";
