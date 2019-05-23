@@ -27,7 +27,9 @@ const MediaNav = ({ length, curr, uploadPage }: IProps) => (
                 className={`btn ${
                     step === curr ? "btn-primary" : "btn-secondary"
                 }`}
-                onClick={() => checkCurrPage(curr, step, () => uploadPage(step))}
+                onClick={() =>
+                    checkCurrPage(curr, step, () => uploadPage(step))
+                }
             >
                 {step}
             </button>

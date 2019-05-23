@@ -34,14 +34,18 @@ class MediaService {
             ? getPosters([])
             : axios
                   .get(ApiConfig.getPopularTVShowsPath)
-                  .then((ids: string[] | string | any) => this.convertToArrWithKeyId(ids))
+                  .then((ids: string[] | string | any) =>
+                      this.convertToArrWithKeyId(ids)
+                  )
                   .then((ids: IBaseMedia[]) => getPosters(ids));
     }
 
     getWantedMoviesIds(): Promise<BaseMedia[]> {
         return axios
             .get(ApiConfig.getWantedMoviesPath)
-            .then((ids: string[] | string | any) => this.convertToArrWithKeyId(ids))
+            .then((ids: string[] | string | any) =>
+                this.convertToArrWithKeyId(ids)
+            )
             .then((res: IBaseMedia[]) => this.getPosters(res, MediaType.Movie));
     }
 

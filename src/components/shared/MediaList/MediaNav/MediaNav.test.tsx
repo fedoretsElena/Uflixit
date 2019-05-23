@@ -1,10 +1,9 @@
 import MediaNav, { checkCurrPage, generateArr } from "./MediaNav";
 
 describe("MediaNax component", () => {
-
     it("should render correctly", () => {
         const component = shallow(
-            <MediaNav curr={1} length={2} uploadPage={(arg) => arg}/>
+            <MediaNav curr={1} length={2} uploadPage={arg => arg} />
         );
 
         expect(component).toMatchSnapshot();
@@ -12,10 +11,13 @@ describe("MediaNax component", () => {
 
     it("should format template correctly", () => {
         const component = mount(
-            <MediaNav curr={1} length={2} uploadPage={(arg) => arg}/>
+            <MediaNav curr={1} length={2} uploadPage={arg => arg} />
         );
 
-        const prevBtn = component.find("button").first().text();
+        const prevBtn = component
+            .find("button")
+            .first()
+            .text();
 
         expect(prevBtn).toEqual("1");
     });
@@ -43,7 +45,6 @@ describe("MediaNax component", () => {
         });
 
         it("uploadPage should be called after click on prev button", () => {
-
             component
                 .find("button")
                 .first()
@@ -53,7 +54,6 @@ describe("MediaNax component", () => {
         });
 
         it("should call checkCurrPage after click on navigation items", () => {
-
             component
                 .find("button")
                 .at(1)
@@ -65,10 +65,8 @@ describe("MediaNax component", () => {
 });
 
 describe("generateArr function", () => {
-
     it("should return navigation arr", () => {
-        expect(generateArr(5, 3))
-            .toEqual(expect.arrayContaining([2, 3, 4]));
+        expect(generateArr(5, 3)).toEqual(expect.arrayContaining([2, 3, 4]));
     });
 
     it("should return length = 3", () => {
@@ -77,15 +75,14 @@ describe("generateArr function", () => {
 });
 
 describe("checkCurrPage function", () => {
-    let mockArg: { curr: number, next: number, callback: () => void };
+    let mockArg: { curr: number; next: number; callback: () => void };
     let spyOnCallback: any;
 
     beforeEach(() => {
         mockArg = {
             curr: 1,
             next: 2,
-            callback: () => {
-            }
+            callback: () => {}
         };
 
         spyOnCallback = jest.spyOn(mockArg, "callback");

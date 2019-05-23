@@ -1,11 +1,10 @@
 import React from "react";
-import renderer from "react-test-renderer";
+import { render } from "react-testing-library";
 
 import App from "./App";
 
 it("App snapshot", () => {
-    const component = renderer.create(<App/>);
-    const tree = component.toJSON();
+    const { asFragment } = render(<App />);
 
-    expect(tree).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
 });

@@ -3,7 +3,7 @@ import SearchResults from "./SearchResults";
 jest.mock("../../data/services/mediaService");
 
 describe("MediaDetail component", () => {
-    let mockProps: { location: any, history: any };
+    let mockProps: { location: any; history: any };
     let component: any;
 
     beforeEach(() => {
@@ -16,12 +16,15 @@ describe("MediaDetail component", () => {
             }
         };
 
-        component = shallow(<SearchResults history={mockProps.history}
-                                           location={mockProps.location}
-        />);
+        component = shallow(
+            <SearchResults
+                history={mockProps.history}
+                location={mockProps.location}
+            />
+        );
     });
 
-    it("should render correctly and take data", (done) => {
+    it("should render correctly and take data", done => {
         setTimeout(() => {
             component.update();
 

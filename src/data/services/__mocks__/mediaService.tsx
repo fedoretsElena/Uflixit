@@ -8,14 +8,18 @@ export default class MediaService {
         {
             id: "1",
             title: "Game of Thrones"
-        }, {
+        },
+        {
             id: "2",
             title: "The walking Dead"
-        }].map(i => new BaseMedia(i, MediaType.Movie));
+        }
+    ].map(i => new BaseMedia(i, MediaType.Movie));
 
     mediaDetail: Movie | TVShow = new MediaFactory(MediaType.TVShow, {
         ...this.media[0],
         creators: [],
+        genres: [],
+        keywords: [],
         status: "ends",
         yearEnded: "2019",
         yearStarted: "2010"
