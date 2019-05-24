@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Suspense, lazy } from "react";
 import { CSSTransition } from "react-transition-group";
 
 import ErrorMsg from "../shared/ErrorMsg";
@@ -11,6 +11,8 @@ import TVShow from "../../models/TVShow";
 import MediaService from "../../data/services/mediaService";
 
 import "./MediaDetail.scss";
+
+const Reviews = lazy(() => import("./Reviews"));
 
 interface IState {
     media: TVShow | Movie | any;
@@ -44,6 +46,7 @@ class MediaDetail extends Component<any, IState> {
             genres,
             fanart
         } = this.state.media;
+        const { location } = this.props;
         const bgStyle = {
             backgroundImage: `url(${fanart})`
         };
@@ -54,9 +57,10 @@ class MediaDetail extends Component<any, IState> {
                 {this.state.loaded && (
                     <div className="row mt-5 mb-5">
                         <div
-                            className="media__bg cover-bg position-absolute w-100 h-100"
+                            className="media__bg position-absolute w-100"
                             style={bgStyle}
                         />
+
                         <div className="col col-4 col--perspective">
                             <CSSTransition
                                 in={!!image}
@@ -127,9 +131,15 @@ class MediaDetail extends Component<any, IState> {
                                 </div>
                             </div>
                         </section>
-
-                        <section className="col-12 mt-4"> test</section>
                     </div>
+                )}
+
+                {this.state.media.title && (
+                    <section className="col-12 mt-4">
+                        <Suspense fallback={<Loader />}>
+                            <Reviews title={title} location={location} />
+                        </Suspense>
+                    </section>
                 )}
 
                 {this.state.error && <ErrorMsg msg={this.state.error} />}

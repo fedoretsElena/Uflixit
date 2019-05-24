@@ -7,6 +7,8 @@ class ApiConfig {
     static getMediaDetailsPath = `${ApiConfig.API}{type}/details/{id}`;
     static getMediaPosterPath = `${ApiConfig.API}{type}/poster/{id}`;
     static getMediaSearchPath = `${ApiConfig.API}{type}/search`;
+
+    static getMediaMetacriticsPath = `${ApiConfig.API}{type}/metacritic`;
 }
 
 export default ApiConfig;
