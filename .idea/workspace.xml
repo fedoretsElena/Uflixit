@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3df03ab5-3ce7-478e-8912-d1babbf003d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/MediaDetail/Reviews/ReviewsItem/ReviewsItem.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MediaDetail/Reviews/ReviewsItem/ReviewsItem.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MediaDetail/Reviews/ReviewsItem/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MediaDetail/Reviews/ReviewsList/ReviewsList.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MediaDetail/Reviews/ReviewsList/ReviewsList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MediaDetail/Reviews/ReviewsList/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shared/InfinityScroll/InfinityScroll.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/shared/InfinityScroll/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/Review.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MediaDetail/MediaDetail.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MediaDetail/MediaDetail.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MediaDetail/MediaDetail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MediaDetail/MediaDetail.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/ErrorMsg/ErrorMsg.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/ErrorMsg/ErrorMsg.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/ApiConfig.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ApiConfig.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/services/mediaService.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/services/mediaService.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="3df03ab5-3ce7-478e-8912-d1babbf003d3" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -33,10 +14,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/MediaDetail/Reviews/ReviewsList/ReviewsList.tsx">
+        <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="40" selection-start-column="40" selection-end-column="40" />
+            <state relative-caret-position="42">
+              <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -96,7 +77,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/services/authService.tsx" />
         <option value="$PROJECT_DIR$/src/models/User.tsx" />
         <option value="$PROJECT_DIR$/src/data/mocks/media-list.tsx" />
         <option value="$PROJECT_DIR$/src/models/Media.tsx" />
@@ -147,6 +127,7 @@
         <option value="$PROJECT_DIR$/src/components/shared/InfinityScroll/InfinityScroll.tsx" />
         <option value="$PROJECT_DIR$/src/components/MediaDetail/Reviews/ReviewsList/ReviewsList.tsx" />
         <option value="$PROJECT_DIR$/src/index.scss" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
   </component>
@@ -173,63 +154,6 @@
             <path>
               <item name="Uflixit" type="b2602c69:ProjectViewProjectNode" />
               <item name="Uflixit" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Uflixit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Uflixit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Uflixit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Uflixit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Uflixit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Uflixit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MediaDetail" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Uflixit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Uflixit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MediaDetail" type="462c0819:PsiDirectoryNode" />
-              <item name="Reviews" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Uflixit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Uflixit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MediaDetail" type="462c0819:PsiDirectoryNode" />
-              <item name="Reviews" type="462c0819:PsiDirectoryNode" />
-              <item name="ReviewsItem" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Uflixit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Uflixit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="MediaDetail" type="462c0819:PsiDirectoryNode" />
-              <item name="Reviews" type="462c0819:PsiDirectoryNode" />
-              <item name="ReviewsList" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Uflixit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Uflixit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="shared" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Uflixit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Uflixit" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="styles" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -349,7 +273,7 @@
       <workItem from="1558506827171" duration="70000" />
       <workItem from="1558510135953" duration="22882000" />
       <workItem from="1558596447734" duration="19491000" />
-      <workItem from="1558685284065" duration="19574000" />
+      <workItem from="1558685284065" duration="20118000" />
     </task>
     <servers />
   </component>
@@ -362,10 +286,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230171000" />
+    <option name="totallyTimeSpent" value="230715000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14699684" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -382,7 +307,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.47455868" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.2834891" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -415,32 +340,8 @@
     <select />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/shared/Title/Title.test.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/react-testing-library/typings/index.d.ts">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/coverage/lcov-report/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="45" lean-forward="true" selection-start-line="6" selection-start-column="45" selection-end-line="6" selection-end-column="45" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#2;n#tbody#0;n#table#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#td#1;n#tr#2;n#tbody#0;n#table#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#3;n#tbody#0;n#table#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#td#1;n#tr#3;n#tbody#0;n#table#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/react-dom/cjs/react-dom.development.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -807,10 +708,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/coverage/lcov-report/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="53" lean-forward="true" selection-start-line="3" selection-start-column="53" selection-end-line="3" selection-end-column="53" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#2;n#tbody#0;n#table#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#td#1;n#tr#2;n#tbody#0;n#table#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#td#1;n#tr#3;n#tbody#0;n#table#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#td#1;n#tr#3;n#tbody#0;n#table#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/MediaDetail/Reviews/ReviewsList/ReviewsList.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="40" selection-start-column="40" selection-end-column="40" />
+        <state relative-caret-position="336">
+          <caret line="16" column="42" lean-forward="true" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
         </state>
       </provider>
     </entry>
