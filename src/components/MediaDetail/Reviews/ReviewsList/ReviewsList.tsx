@@ -44,6 +44,11 @@ const ReviewsList = ({ reviews }: IProps) => {
             <InfinityScroll
                 listenUntil={visibleReviews.length < reviews.length}
                 endPageHappend={showMore}
+                endMessage={
+                    <p style={{ textAlign: "center" }}>
+                        <b>Yay! You have seen it all</b>
+                    </p>
+                }
             />
 
             {!reviews.length && <ErrorMsg msg="There is no reviews yet." />}

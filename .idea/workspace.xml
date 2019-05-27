@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3df03ab5-3ce7-478e-8912-d1babbf003d3" name="Default Changelist" comment="" />
+    <list default="true" id="3df03ab5-3ce7-478e-8912-d1babbf003d3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/MediaDetail/Reviews/ReviewsList/ReviewsList.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/shared/InfinityScroll/InfinityScroll.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/mocks/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/mocks/reviews.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__snapshots__/App.test.js.snap" beforeDir="false" afterPath="$PROJECT_DIR$/src/__snapshots__/App.test.js.snap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MediaDetail/Reviews/ReviewsList/ReviewsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MediaDetail/Reviews/ReviewsList/ReviewsList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/ErrorMsg/__snapshots__/ErrorMsg.test.tsx.snap" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/ErrorMsg/__snapshots__/ErrorMsg.test.tsx.snap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/InfinityScroll/InfinityScroll.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/InfinityScroll/InfinityScroll.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/services/__mocks__/mediaService.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/services/__mocks__/mediaService.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/services/mediaService.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/services/mediaService.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data/services/mediaService.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/services/mediaService.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/Review.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Review.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/_animation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/_animation.scss" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -13,11 +28,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/data/services/mediaService.test.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+            <state relative-caret-position="462">
+              <caret line="58" column="7" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/MediaDetail/Reviews/ReviewsList/ReviewsList.test.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/MediaDetail/Reviews/ReviewsList/ReviewsList.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="16" column="47" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -26,11 +65,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>'</find>
-      <find>ordered-imports</find>
-      <find>prettier</find>
-      <find>jest</find>
-      <find>expect</find>
       <find>Adapter</find>
       <find>length</find>
       <find>&lt;Link</find>
@@ -47,7 +81,6 @@
       <find>REACT-TESTIN</find>
       <find>JSDOM</find>
       <find>mount</find>
-      <find>.find</find>
       <find>map</find>
       <find>col--perspective</find>
       <find>p</find>
@@ -56,6 +89,12 @@
       <find>fade</find>
       <find>.fade</find>
       <find>showReviews</find>
+      <find />
+      <find>_re`z</find>
+      <find>critic_reviews</find>
+      <find>classNames</find>
+      <find>.find</find>
+      <find>&quot;</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;</replace>
@@ -77,20 +116,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/models/User.tsx" />
-        <option value="$PROJECT_DIR$/src/data/mocks/media-list.tsx" />
-        <option value="$PROJECT_DIR$/src/models/Media.tsx" />
-        <option value="$PROJECT_DIR$/src/data/services/authService.tsx" />
-        <option value="$PROJECT_DIR$/src/data/services/authService.test.tsx" />
-        <option value="$PROJECT_DIR$/src/models/BaseMedia.tsx" />
-        <option value="$PROJECT_DIR$/src/setupTests.js" />
         <option value="$PROJECT_DIR$/src/components/shared/MediaList/MediaNav/MediaNav.tsx" />
         <option value="$PROJECT_DIR$/src/components/shared/MediaList/MediaNav/MediaNav.test.tsx" />
         <option value="$PROJECT_DIR$/src/components/shared/ErrorMsg/ErrorMsg.test.tsx" />
         <option value="$PROJECT_DIR$/src/data/__mocks__/mediaService.tsx" />
         <option value="$PROJECT_DIR$/src/components/shared/MediaList/MediaList.tsx" />
         <option value="$PROJECT_DIR$/src/components/WantedMovies/WantedMovies.tsx" />
-        <option value="$PROJECT_DIR$/src/data/services/mediaService.test.tsx" />
         <option value="$PROJECT_DIR$/src/__mocks__/axios.ts" />
         <option value="$PROJECT_DIR$/src/components/SearchResults/SearchResults.tsx" />
         <option value="$PROJECT_DIR$/src/components/SearchResults/SearchResults.test.tsx" />
@@ -100,7 +131,6 @@
         <option value="$PROJECT_DIR$/src/components/shared/Rating/Rating.test.tsx" />
         <option value="$PROJECT_DIR$/src/App.test.js" />
         <option value="$PROJECT_DIR$/src/components/WantedMovies/WantedMovies.test.tsx" />
-        <option value="$PROJECT_DIR$/src/data/services/__mocks__/mediaService.tsx" />
         <option value="$PROJECT_DIR$/src/components/MediaDetail/MediaDetail.test.tsx" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/components/Metacritics/index.ts" />
@@ -110,10 +140,8 @@
         <option value="$PROJECT_DIR$/src/App.tsx" />
         <option value="$PROJECT_DIR$/src/components/Footer/Footer.tsx" />
         <option value="$PROJECT_DIR$/src/core/ApiConfig.tsx" />
-        <option value="$PROJECT_DIR$/src/data/services/mediaService.tsx" />
         <option value="$PROJECT_DIR$/src/components/Reviews/ReviewsList/index.ts" />
         <option value="$PROJECT_DIR$/src/components/Reviews/ReviewsItem/index.ts" />
-        <option value="$PROJECT_DIR$/src/models/Review.ts" />
         <option value="$PROJECT_DIR$/src/components/Reviews/ReviewsItem/ReviewsItem.scss" />
         <option value="$PROJECT_DIR$/src/components/MediaDetail/MediaDetail.tsx" />
         <option value="$PROJECT_DIR$/src/components/Reviews/Reviews.tsx" />
@@ -124,10 +152,21 @@
         <option value="$PROJECT_DIR$/src/components/MediaDetail/MediaDetail.scss" />
         <option value="$PROJECT_DIR$/src/components/shared/InfinityScroll/index.ts" />
         <option value="$PROJECT_DIR$/src/components/MediaDetail/Reviews/ReviewsItem/ReviewsItem.tsx" />
-        <option value="$PROJECT_DIR$/src/components/shared/InfinityScroll/InfinityScroll.tsx" />
-        <option value="$PROJECT_DIR$/src/components/MediaDetail/Reviews/ReviewsList/ReviewsList.tsx" />
         <option value="$PROJECT_DIR$/src/index.scss" />
         <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/node_modules/jest-environment-jsdom/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js" />
+        <option value="$PROJECT_DIR$/src/data/mocks/media.ts" />
+        <option value="$PROJECT_DIR$/src/models/Review.ts" />
+        <option value="$PROJECT_DIR$/src/data/services/mediaService.tsx" />
+        <option value="$PROJECT_DIR$/src/data/services/__mocks__/mediaService.tsx" />
+        <option value="$PROJECT_DIR$/src/data/mocks/index.ts" />
+        <option value="$PROJECT_DIR$/src/components/MediaDetail/Reviews/ReviewsList/ReviewsList.tsx" />
+        <option value="$PROJECT_DIR$/src/styles/_animation.scss" />
+        <option value="$PROJECT_DIR$/src/components/shared/InfinityScroll/InfinityScroll.tsx" />
+        <option value="$PROJECT_DIR$/src/components/shared/InfinityScroll/InfinityScroll.test.tsx" />
+        <option value="$PROJECT_DIR$/src/data/mocks/reviews.ts" />
+        <option value="$PROJECT_DIR$/src/data/services/mediaService.test.tsx" />
+        <option value="$PROJECT_DIR$/src/components/MediaDetail/Reviews/ReviewsList/ReviewsList.test.tsx" />
       </list>
     </option>
   </component>
@@ -147,7 +186,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -155,10 +193,72 @@
               <item name="Uflixit" type="b2602c69:ProjectViewProjectNode" />
               <item name="Uflixit" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Uflixit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Uflixit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Uflixit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Uflixit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Uflixit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Uflixit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="MediaDetail" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Uflixit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Uflixit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="MediaDetail" type="462c0819:PsiDirectoryNode" />
+              <item name="Reviews" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Uflixit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Uflixit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="MediaDetail" type="462c0819:PsiDirectoryNode" />
+              <item name="Reviews" type="462c0819:PsiDirectoryNode" />
+              <item name="ReviewsList" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Uflixit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Uflixit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Uflixit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Uflixit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="mocks" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Uflixit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Uflixit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Uflixit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Uflixit" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -273,7 +373,8 @@
       <workItem from="1558506827171" duration="70000" />
       <workItem from="1558510135953" duration="22882000" />
       <workItem from="1558596447734" duration="19491000" />
-      <workItem from="1558685284065" duration="20118000" />
+      <workItem from="1558685284065" duration="20914000" />
+      <workItem from="1558943607504" duration="13453000" />
     </task>
     <servers />
   </component>
@@ -286,7 +387,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230715000" />
+    <option name="totallyTimeSpent" value="244964000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
@@ -307,7 +408,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.2834891" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3125649" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -340,95 +441,6 @@
     <select />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/react-testing-library/typings/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/react-dom/cjs/react-dom.development.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="20341" column="6" selection-start-line="20341" selection-start-column="6" selection-end-line="20341" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/jest-dom/dist/extend-expect.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/jest-dom/extend-expect.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="26" lean-forward="true" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/shared/Loader/Loader.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="33" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/shared/Input/Input.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/shared/ErrorMsg/ErrorMsg.test.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/shared/Rating/Rating.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Header/Header.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Header/SearchForm/SearchForm.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1293">
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/shared/MediaList/MediaNav/MediaNav.test.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-915">
-          <caret line="40" column="23" lean-forward="true" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/shared/Rating/Rating.test.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
@@ -453,16 +465,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/services/__mocks__/mediaService.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
@@ -470,13 +472,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/static/js/main.6350a53e.chunk.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14911" selection-start-column="14895" selection-end-column="14911" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/build/static/js/main.6350a53e.chunk.js" />
     <entry file="file://$PROJECT_DIR$/build/static/js/main.db710bec.chunk.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
@@ -543,13 +539,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MediaDetail/MediaDetail.test.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/MediaDetail/Reviews/index.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -571,16 +560,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/services/mediaService.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="121" column="5" lean-forward="true" selection-start-line="121" selection-start-column="5" selection-end-line="121" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -616,16 +595,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="149" selection-start-column="149" selection-end-column="149" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MediaDetail/Reviews/Reviews.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1575">
-          <caret line="75" column="23" lean-forward="true" selection-start-line="75" selection-start-column="23" selection-end-line="75" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -677,30 +646,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MediaDetail/Reviews/ReviewsItem/ReviewsItem.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="23" column="48" lean-forward="true" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/models/Review.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/shared/InfinityScroll/InfinityScroll.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -725,20 +670,176 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MediaDetail/Reviews/ReviewsList/ReviewsList.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="42" lean-forward="true" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/jest-environment-jsdom/node_modules/jsdom/lib/jsdom/living/generated/EventTarget.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="187" column="20" selection-start-line="187" selection-start-column="20" selection-end-line="187" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/models/Review.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/mocks/media.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="e#0#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/services/authService.test.tsx">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="43" selection-start-column="43" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MediaDetail/Reviews/ReviewsItem/ReviewsItem.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/services/__mocks__/mediaService.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="19" column="36" lean-forward="true" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/mocks/index.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/services/mediaService.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="134" lean-forward="true" selection-start-line="134" selection-end-line="134" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MediaDetail/MediaDetail.test.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="43" column="10" lean-forward="true" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/_animation.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SearchResults/SearchResults.test.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-247">
+          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/setupTests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="26" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/shared/InfinityScroll/InfinityScroll.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="45" column="30" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/shared/InfinityScroll/InfinityScroll.test.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/mocks/reviews.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MediaDetail/Reviews/Reviews.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/services/mediaService.test.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="58" column="7" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MediaDetail/Reviews/ReviewsList/ReviewsList.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="16" column="47" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MediaDetail/Reviews/ReviewsList/ReviewsList.test.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

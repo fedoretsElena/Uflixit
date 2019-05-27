@@ -7,7 +7,7 @@ import Review from "../../models/Review";
 import IMediaResponse from "../../models/MediaResponse";
 import BaseMedia, { IBaseMedia } from "../../models/BaseMedia";
 import MediaFactory, { MediaType } from "../../models/MediaFactory";
-import IReview from "../../models/Review";
+import { IReview } from "../../models/Review";
 
 class MediaService {
     VISIBLE_ITEMS: number = 10;

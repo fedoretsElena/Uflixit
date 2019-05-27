@@ -1,4 +1,4 @@
-export default interface IReview {
+export interface IReview {
     critic_source: string;
     critic_author: string;
     critic_summary: string;
