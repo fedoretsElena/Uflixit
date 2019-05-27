@@ -1,11 +1,13 @@
 import axios, { AxiosRequestConfig } from "axios";
 
 import ApiConfig from "../../core/ApiConfig";
-import BaseMedia, { IBaseMedia } from "../../models/BaseMedia";
-import MediaFactory, { MediaType } from "../../models/MediaFactory";
-import IMediaResponse from "../../models/MediaResponse";
 import Movie from "../../models/Movie";
 import TVShow from "../../models/TVShow";
+import Review from "../../models/Review";
+import IMediaResponse from "../../models/MediaResponse";
+import BaseMedia, { IBaseMedia } from "../../models/BaseMedia";
+import MediaFactory, { MediaType } from "../../models/MediaFactory";
+import { IReview } from "../../models/Review";
 
 class MediaService {
     VISIBLE_ITEMS: number = 10;
@@ -102,6 +104,43 @@ class MediaService {
                     .then(res => [...res[0], ...res[1]]);
             })
         );
+    }
+
+    getReviews(
+        title: string,
+        location: { pathname: string }
+    ): Promise<Review[]> {
+        const type =
+            location.pathname.indexOf("movie") !== -1
+                ? MediaType.Movie
+                : MediaType.TVShow;
+
+        const params: URLSearchParams = new URLSearchParams({ title });
+
+        return axios
+            .get(
+                this.prepareApiPath(
+                    ApiConfig.getMediaMetacriticsPath,
+                    "",
+                    type
+                ),
+                { params }
+            )
+            .then(
+                (
+                    data:
+                        | {
+                              metascore: string;
+                              metascore_id: string[];
+                              critic_reviews: IReview[];
+                          }
+                        | any
+                ) => {
+                    return data.critic_reviews.map(
+                        (i: IReview) => new Review(i)
+                    );
+                }
+            );
     }
 
     private getPosters(

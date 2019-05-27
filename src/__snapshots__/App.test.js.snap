@@ -162,7 +162,9 @@ exports[`App snapshot 1`] = `
             </s>
           </li>
           <li>
-            Lazy loading
+            <s>
+              Lazy loading
+            </s>
           </li>
         </ul>
       </div>

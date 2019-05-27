@@ -5,7 +5,7 @@ interface IProps {
 }
 
 const ErrorMsg = (props: IProps) => (
-    <div className="alert alert-warning" role="alert">
+    <div className="alert alert-secondary" role="alert">
         {props.msg}
     </div>
 );

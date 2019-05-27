@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReviewsList component should renders correctly 1`] = `
+<section
+  className="border-top"
+>
+  <TransitionGroup
+    childFactory={[Function]}
+    component={null}
+  />
+  <InfinityScroll
+    endMessage={
+      <p
+        style={
+          Object {
+            "textAlign": "center",
+          }
+        }
+      >
+        <b>
+          Yay! You have seen it all
+        </b>
+      </p>
+    }
+    endPageHappend={[Function]}
+    listenUntil={false}
+  />
+  <ErrorMsg
+    msg="There is no reviews yet."
+  />
+</section>
+`;

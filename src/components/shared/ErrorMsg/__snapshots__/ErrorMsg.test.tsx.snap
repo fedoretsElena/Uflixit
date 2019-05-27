@@ -2,7 +2,7 @@
 
 exports[`ErrorMsg component should render correctly 1`] = `
 <div
-  className="alert alert-warning"
+  className="alert alert-secondary"
   role="alert"
 >
   Waning msg

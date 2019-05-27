@@ -1,5 +1,6 @@
 import mockAxios from "axios";
 
+import mocksData from "../mocks";
 import MediaService from "./mediaService";
 import { MediaType } from "../../models/MediaFactory";
 import BaseMedia, { IBaseMedia } from "../../models/BaseMedia";
@@ -39,6 +40,21 @@ describe("mediaService", () => {
             const res = await mediaService.getDetail("1", location);
 
             expect(res).toHaveProperty("director");
+        });
+    });
+
+    describe("getReviews method", () => {
+        it("should return mock reviews", async () => {
+            mockAxios.get.mockImplementation(() => {
+                return Promise.resolve({ critic_reviews: mocksData.reviews });
+            });
+
+            const reviews = await mediaService.getReviews("Game of Thrones", {
+                pathname: "https://uflixit/tv-shows/"
+            });
+
+            expect(reviews).toHaveLength(8);
+            expect(reviews[0].author).toEqual("Tim Grierson");
         });
     });
 
